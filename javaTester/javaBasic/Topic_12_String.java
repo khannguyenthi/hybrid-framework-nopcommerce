@@ -1,13 +1,14 @@
 package javaBasic;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Topic_12_String {
 
 	public static void main(String[] args) {
-		System.setProperty("webdriver.gecko.driver", "\\browserDrivers\\geckodriver.exe");
-		WebDriver driver = new FirefoxDriver();
+		//System.setProperty("webdriver.gecko.driver", ".\\browserDrivers\\geckodriver.exe");
+		//WebDriver driver = new FirefoxDriver();
 		
 		String studentName = "Automation Testing";
 		String courseName = "AUTOMATION TESTING";
@@ -69,11 +70,41 @@ public class Topic_12_String {
 		//Split & substring
 		String osName = System.getProperty("os.name");
 		System.out.println(osName);
+		//Windows 10
+		// Handle multiple browser 
 		
-		String driverInstanceName = driver.toString();
-		System.out.println(driverInstanceName);
+		if(osName.toLowerCase().contains("windows")) {
+			Keys key = Keys.CONTROL;
+		} else {
+			Keys key = Keys.COMMAND;
+		}
 		
+		//Multiple browser: upper case
 		
+		//String driverInstanceName = driver.toString();
+		//System.out.println(driverInstanceName);
+		
+		//Close browser
+		//if(driverInstanceName.contains("internetexplore")) {
+			
+		//}
+		
+		//Khoang trang/ xuong dong/ tab - trim
+		String helloWorld = " \n \t    Hello World!     ";
+		System.out.println(helloWorld);
+		System.out.println(helloWorld.trim());
+		
+		helloWorld = " ";
+		System.out.println("Co empty ko?" + helloWorld.isEmpty());
+		System.out.println("Co blank ko?" + helloWorld.isBlank());
+		
+		//Dynamic locator
+		//Dai dien cho 1 chuoi: %s
+		// %b, %t, %d
+		String dynamicButtonXpath = "//button[@id='%s']";
+		System.out.println("Click to Login button = " + dynamicButtonXpath.format(dynamicButtonXpath, "login"));
+		System.out.println("Click to Search button = " + dynamicButtonXpath.format(dynamicButtonXpath, "search"));
+		System.out.println("Click to Register button = " + dynamicButtonXpath.format(dynamicButtonXpath, "register"));
 	}
 
 }
