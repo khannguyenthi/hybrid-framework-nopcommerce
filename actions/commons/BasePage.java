@@ -17,6 +17,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BasePage {
 	
+	public static BasePage getBasePageObject() {
+		return new BasePage();
+	}
+	
+	//Neu run base on (III) thì fai de protected (vì class nào kế thừa thì mới dc dùng), 3 cai private moi dung
+	//Nhung 2 type tren ko run dc. 
 	public void openPageUrl(WebDriver driver, String pageUrl)
 	{
 		driver.get(pageUrl);
@@ -101,16 +107,16 @@ public class BasePage {
 		   }
 	}
 	
-	public By getByXpath(String xpathLocator) {
+	private By getByXpath(String xpathLocator) {
 		return By.xpath(xpathLocator);
 		
 	}
 	
-	public WebElement getWebElement(WebDriver driver, String xpathLocator) {
+	private WebElement getWebElement(WebDriver driver, String xpathLocator) {
 		return driver.findElement(getByXpath(xpathLocator));
 	}
 	
-	public List<WebElement> getListWebElement(WebDriver driver, String xpathLocator) {
+	private List<WebElement> getListWebElement(WebDriver driver, String xpathLocator) {
 		return driver.findElements(getByXpath(xpathLocator));
 	}
 	
@@ -327,6 +333,7 @@ public class BasePage {
 		explicitWait.until(ExpectedConditions.invisibilityOfAllElements(getListWebElement(driver, xpathLocator)));
 	}
 	public void waitForElementClickable(WebDriver driver, String xpathLocator) {
+		System.out.println("Driver at wait for element  = " + driver.toString());
 		WebDriverWait explicitWait = new WebDriverWait(driver, longTimeout);
 		explicitWait.until(ExpectedConditions.elementToBeClickable(getByXpath(xpathLocator)));
 	}
