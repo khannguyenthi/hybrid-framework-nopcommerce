@@ -2,9 +2,9 @@
 <suite name="NopCommerce">
 
   <test name="Run on Firefox">
+  	<parameter name="browser" value="firefox" > </parameter>
     <classes>
-      <class name="com.nopcommerce.user.Level_03_Page_Object"/>
+      <class name="com.nopcommerce.user.Level_05_Page_Factory"/>
        </classes>
   </test>
-  
 </suite> 
