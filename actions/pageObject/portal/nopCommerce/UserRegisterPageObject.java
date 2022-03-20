@@ -1,15 +1,15 @@
-package pageObject;
+package pageObject.portal.nopCommerce;
 
 import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
-import pageUIs.RegisterPageUI;
+import pageUIs.nopCommerce.user.RegisterPageUI;
 
 
-public class RegisterPageObject extends BasePage {
+public class UserRegisterPageObject extends BasePage {
 	private WebDriver driver; 
 	
-	public RegisterPageObject(WebDriver driver) {
+	public UserRegisterPageObject(WebDriver driver) {
 		this.driver = driver;
 	}
 
@@ -58,15 +58,12 @@ public class RegisterPageObject extends BasePage {
 
 	public void inputToEmailTextbox(String emailAddress) {
 		waitForElementVisible(driver,RegisterPageUI.EMAIL_TEXTBOX);
-		sendkeyToElement(driver,RegisterPageUI.EMAIL_TEXTBOX,emailAddress);
-
-		
+		sendkeyToElement(driver,RegisterPageUI.EMAIL_TEXTBOX,emailAddress);	
 	}
 
 	public void inputToPasswordTextbox(String password) {
 		waitForElementVisible(driver,RegisterPageUI.PASSWORD_TEXTBOX);
 		sendkeyToElement(driver,RegisterPageUI.PASSWORD_TEXTBOX,password);
-
 		
 	}
 
@@ -80,9 +77,11 @@ public class RegisterPageObject extends BasePage {
 		waitForElementClickable(driver,RegisterPageUI.CONFIRM_REGISTER_SUCCESS_MESSAGE);
 		return getElementText(driver,RegisterPageUI.CONFIRM_REGISTER_SUCCESS_MESSAGE);
 	}
-	public void clickToLogoutLink() {
+	public UserHomePageObject clickToLogoutLink() {
 		waitForElementClickable(driver,RegisterPageUI.LOGOUT_LINK);
 		clickToElement(driver,RegisterPageUI.LOGOUT_LINK);
+		//return new HomePageObject(driver);
+		return PageGeneratorManager.getUserHomePage(driver);
 		
 	}
 

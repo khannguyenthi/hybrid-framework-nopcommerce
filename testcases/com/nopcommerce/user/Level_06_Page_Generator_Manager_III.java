@@ -3,12 +3,12 @@ package com.nopcommerce.user;
 import org.testng.annotations.Test;
 
 import commons.BasePage;
-import commons.BaseTest;
-import pageObject.HomePageObject;
-import pageObject.LoginPageObject;
-import pageObject.MyAccountPageObject;
-import pageObject.PageGeneratorManager;
-import pageObject.RegisterPageObject;
+import commons.BaseTestNopCommerce;
+import pageObject.portal.nopCommerce.PageGeneratorManager;
+import pageObject.portal.nopCommerce.UserCustomerInfoPageObject;
+import pageObject.portal.nopCommerce.UserHomePageObject;
+import pageObject.portal.nopCommerce.UserLoginPageObject;
+import pageObject.portal.nopCommerce.UserRegisterPageObject;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -22,7 +22,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
-public class Level_06_Page_Generator_Manager_III extends BaseTest{
+public class Level_06_Page_Generator_Manager_III extends BaseTestNopCommerce{
 	
 	 @Parameters("browser")
 	 @BeforeClass 
@@ -31,8 +31,8 @@ public class Level_06_Page_Generator_Manager_III extends BaseTest{
 		 
 		 // 1  using for pre-condition case. 
 		 //homePage = new HomePageObject(driver);
-		 homePage = PageGeneratorManager.getHomePage(driver);
-		 registerPage = PageGeneratorManager.getRegisterPage(driver);
+		 homePage = PageGeneratorManager.getUserHomePage(driver);
+		 registerPage = PageGeneratorManager.getUserRegisterPage(driver);
 		 
 		 emailAddress = "khan" + generateFakeNumber() + "@gmail.com";
 		 emailAddressTC14 = "khan" + generateFakeNumber() + "@gmail.com";
@@ -66,7 +66,7 @@ public class Level_06_Page_Generator_Manager_III extends BaseTest{
   public void Login_01_With_Empty_Data() {
 	  
 	  System.out.println("Home page + step 01: Click Login link");
-	  loginPage = homePage.clickToLoginLink();
+	  loginPage = homePage.clickToLoginLinkUser();
 	  
 	  System.out.println("Login page + step 02: Click Login button");
 	  loginPage.clickToLoginButton();
@@ -78,7 +78,7 @@ public class Level_06_Page_Generator_Manager_III extends BaseTest{
   //@Test
   public void Login_02_With_Invalid_Email() {
 	  System.out.println("Home page + step 01: Click Login link");
-	  loginPage = homePage.clickToLoginLink();
+	  loginPage = homePage.clickToLoginLinkUser();
 
 	  System.out.println("Login page + step 02: Input invalid email");
 	  loginPage.inputToEmailTextbox("Automation");
@@ -93,7 +93,7 @@ public class Level_06_Page_Generator_Manager_III extends BaseTest{
   //@Test
   public void Login_03_With_Not_Yet_Register_Email() {
 	  System.out.println("Home page + step 01: Click Login link");
-	  loginPage = homePage.clickToLoginLink();
+	  loginPage = homePage.clickToLoginLinkUser();
 	  
 	  System.out.println("Login page + step 02: Input Not Exist email");
 	  loginPage.inputToEmailTextbox(emailAddressLogin);
@@ -110,7 +110,7 @@ public class Level_06_Page_Generator_Manager_III extends BaseTest{
   public void Login_04_With_Valid_Email_And_Empty_Password() {
 
 	  System.out.println("Home page + step 06: Click Login link");
-	  loginPage = homePage.clickToLoginLink();
+	  loginPage = homePage.clickToLoginLinkUser();
 	  
 	  System.out.println("Login page + step 07: Input exisiting email & wrong password");
 	  loginPage.inputToEmailTextbox(emailAddressTC14);
@@ -127,7 +127,7 @@ public class Level_06_Page_Generator_Manager_III extends BaseTest{
   public void Login_05_With_Valid_Email_And_Wrong_Password() {
 	 
 	  System.out.println("Home page + step 06: Click Login link");
-	  loginPage = homePage.clickToLoginLink();
+	  loginPage = homePage.clickToLoginLinkUser();
 	  
 	  System.out.println("Login page + step 07: Input exisiting email & wrong password");
 	  loginPage.inputToEmailTextbox(emailAddressTC14);
@@ -145,7 +145,7 @@ public class Level_06_Page_Generator_Manager_III extends BaseTest{
   @Test
   public void Login_06_With_Valid_Email_And_Valid_Password() {
 	  System.out.println("Home page + step 01: Click Login link");
-	  loginPage = homePage.clickToLoginLink();
+	  loginPage = homePage.clickToLoginLinkUser();
 	  
 	  System.out.println("Login page + step 02: Input exisiting email & wrong password");
 	  loginPage.inputToEmailTextbox(emailAddressTC14);
@@ -288,11 +288,11 @@ public void TC_06_Register_Invalid_Confirm_Confirm_Password() {
 	public void afterClass() {
 		driver.quit();
 	}
-  private WebDriver driver; 
-	private String projectPath = System.getProperty("user.dir");
+    private WebDriver driver; 
+	//private String projectPath = System.getProperty("user.dir");
 	private String emailAddress, firstName, lastName, password, emailAddressLogin, emailAddressTC14, myAccountLinkText;
-	private HomePageObject homePage; 
-	private LoginPageObject loginPage;
-	private RegisterPageObject registerPage;
-	private MyAccountPageObject myAccountPage;
+	private UserHomePageObject homePage; 
+	private UserLoginPageObject loginPage;
+	private UserRegisterPageObject registerPage;
+	private UserCustomerInfoPageObject myAccountPage;
 }

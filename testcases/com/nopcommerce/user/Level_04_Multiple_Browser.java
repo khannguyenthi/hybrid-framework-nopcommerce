@@ -3,10 +3,10 @@ package com.nopcommerce.user;
 import org.testng.annotations.Test;
 
 import commons.BasePage;
-import commons.BaseTest;
-import pageObject.HomePageObject;
-import pageObject.LoginPageObject;
-import pageObject.RegisterPageObject;
+import commons.BaseTestNopCommerce;
+import pageObject.portal.nopCommerce.UserHomePageObject;
+import pageObject.portal.nopCommerce.UserLoginPageObject;
+import pageObject.portal.nopCommerce.UserRegisterPageObject;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -22,22 +22,22 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
-public class Level_04_Multiple_Browser extends BaseTest{
+public class Level_04_Multiple_Browser extends BaseTestNopCommerce{
 	private WebDriver driver; 
 	
 	private String emailAddress, firstName, lastName, password, emailAddressLogin, emailAddressTC14, myAccountLinkText;
-	private HomePageObject homePage; 
-	private RegisterPageObject registerPage;
-	private LoginPageObject loginPage;
+	private UserHomePageObject homePage; 
+	private UserRegisterPageObject registerPage;
+	private UserLoginPageObject loginPage;
 	
 	 @Parameters("browser")
 	 @BeforeClass 
 	  public void beforeClass(String browserName) {
 		 driver = getBrowserDriver(browserName);
 		 
-		 homePage = new HomePageObject(driver);
-		 registerPage = new RegisterPageObject(driver);
-		 loginPage = new LoginPageObject(driver);
+		 homePage = new UserHomePageObject(driver);
+		 registerPage = new UserRegisterPageObject(driver);
+		 loginPage = new UserLoginPageObject(driver);
 		 
 		 emailAddress = "khan" + generateFakeNumber() + "@gmail.com";
 		 emailAddressTC14 = "khan" + generateFakeNumber() + "@gmail.com";
@@ -171,7 +171,7 @@ public class Level_04_Multiple_Browser extends BaseTest{
   public void TC_11_Login_With_Empty_Data() {
 	  
 	  System.out.println("Home page + step 01: Click Login link");
-	  homePage.clickToLoginLink();
+	  homePage.clickToLoginLinkUser();
 	  
 	  System.out.println("Login page + step 02: Click Login button");
 	  loginPage.clickToLoginButton();
@@ -183,7 +183,7 @@ public class Level_04_Multiple_Browser extends BaseTest{
   //@Test
   public void TC_12_Login_With_Invalid_Email() {
 	  System.out.println("Home page + step 01: Click Login link");
-	  homePage.clickToLoginLink();
+	  homePage.clickToLoginLinkUser();
 	  
 	  System.out.println("Login page + step 02: Input invalid email");
 	  loginPage.inputToEmailTextbox("Automation");
@@ -198,7 +198,7 @@ public class Level_04_Multiple_Browser extends BaseTest{
   //@Test
   public void TC_13_Login_With_Not_Yet_Register_Email() {
 	  System.out.println("Home page + step 01: Click Login link");
-	  homePage.clickToLoginLink();
+	  homePage.clickToLoginLinkUser();
 	  
 	  System.out.println("Login page + step 02: Input Not Exist email");
 	  loginPage.inputToEmailTextbox(emailAddressLogin);
@@ -234,7 +234,7 @@ public class Level_04_Multiple_Browser extends BaseTest{
 	  registerPage.clickToLogoutLink();
 	  
 	  System.out.println("Home page + step 06: Click Login link");
-	  homePage.clickToLoginLink();
+	  homePage.clickToLoginLinkUser();
 	  
 	  System.out.println("Login page + step 07: Input exisiting email & wrong password");
 	  loginPage.inputToEmailTextbox(emailAddressTC14);
@@ -247,7 +247,7 @@ public class Level_04_Multiple_Browser extends BaseTest{
 	  Assert.assertEquals(loginPage.getErrorMessageNotRegistWrongOrEmptyPassword(),"Login was unsuccessful. Please correct the errors and try again.\n"
 			  + "The credentials provided are incorrect");   
   }
-  @Test
+  //@Test
   public void TC_15_Login_With_Valid_Email_And_Wrong_Password() {
 	 
 	  System.out.println("Home page + Step 01: Click to Register link");
@@ -270,7 +270,7 @@ public class Level_04_Multiple_Browser extends BaseTest{
 	  registerPage.clickToLogoutLink();
 	  
 	  System.out.println("Home page + step 06: Click Login link");
-	  homePage.clickToLoginLink();
+	  homePage.clickToLoginLinkUser();
 	  
 	  System.out.println("Login page + step 07: Input exisiting email & wrong password");
 	  loginPage.inputToEmailTextbox(emailAddress);
@@ -288,7 +288,7 @@ public class Level_04_Multiple_Browser extends BaseTest{
   //@Test
   public void TC_16_Login_With_Valid_Email_And_Valid_Password() {
 	  System.out.println("Home page + step 01: Click Login link");
-	  homePage.clickToLoginLink();
+	  homePage.clickToLoginLinkUser();
 	  
 	  System.out.println("Login page + step 02: Input exisiting email & wrong password");
 	  loginPage.inputToEmailTextbox(emailAddress);

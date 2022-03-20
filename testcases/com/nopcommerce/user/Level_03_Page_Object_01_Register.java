@@ -3,9 +3,9 @@ package com.nopcommerce.user;
 import org.testng.annotations.Test;
 
 import commons.BasePage;
-import pageObject.HomePageObject;
-import pageObject.LoginPageObject;
-import pageObject.RegisterPageObject;
+import pageObject.portal.nopCommerce.UserHomePageObject;
+import pageObject.portal.nopCommerce.UserLoginPageObject;
+import pageObject.portal.nopCommerce.UserRegisterPageObject;
 
 import org.testng.annotations.BeforeClass;
 
@@ -22,9 +22,9 @@ public class Level_03_Page_Object_01_Register extends BasePage{
 	private WebDriver driver; 
 	private String projectPath = System.getProperty("user.dir");
 	private String emailAddress, firstName, lastName, password, emailAddressLogin, emailAddressTC14, myAccountLinkText;
-	private HomePageObject homePage; 
-	private RegisterPageObject registerPage;
-	private LoginPageObject loginPage;
+	private UserHomePageObject homePage; 
+	private UserRegisterPageObject registerPage;
+	private UserLoginPageObject loginPage;
 
 	 @BeforeClass 
 	  public void beforeClass() {
@@ -34,9 +34,9 @@ public class Level_03_Page_Object_01_Register extends BasePage{
 		 driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		 driver.get("https://demo.nopcommerce.com/");	 
 		 
-		 homePage = new HomePageObject(driver);
-		 registerPage = new RegisterPageObject(driver);
-		 loginPage = new LoginPageObject(driver);
+		 homePage = new UserHomePageObject(driver);
+		 registerPage = new UserRegisterPageObject(driver);
+		 loginPage = new UserLoginPageObject(driver);
 		 
 		 emailAddress = "khan" + generateFakeNumber() + "@gmail.com";
 		 emailAddressTC14 = "khan" + generateFakeNumber() + "@gmail.com";
@@ -170,7 +170,7 @@ public class Level_03_Page_Object_01_Register extends BasePage{
   public void TC_11_Login_With_Empty_Data() {
 	  
 	  System.out.println("Home page + step 01: Click Login link");
-	  homePage.clickToLoginLink();
+	  homePage.clickToLoginLinkUser();
 	  
 	  System.out.println("Login page + step 02: Click Login button");
 	  loginPage.clickToLoginButton();
@@ -182,7 +182,7 @@ public class Level_03_Page_Object_01_Register extends BasePage{
   //@Test
   public void TC_12_Login_With_Invalid_Email() {
 	  System.out.println("Home page + step 01: Click Login link");
-	  homePage.clickToLoginLink();
+	  homePage.clickToLoginLinkUser();
 	  
 	  System.out.println("Login page + step 02: Input invalid email");
 	  loginPage.inputToEmailTextbox("Automation");
@@ -197,7 +197,7 @@ public class Level_03_Page_Object_01_Register extends BasePage{
   //@Test
   public void TC_13_Login_With_Not_Yet_Register_Email() {
 	  System.out.println("Home page + step 01: Click Login link");
-	  homePage.clickToLoginLink();
+	  homePage.clickToLoginLinkUser();
 	  
 	  System.out.println("Login page + step 02: Input Not Exist email");
 	  loginPage.inputToEmailTextbox(emailAddressLogin);
@@ -233,7 +233,7 @@ public class Level_03_Page_Object_01_Register extends BasePage{
 	  registerPage.clickToLogoutLink();
 	  
 	  System.out.println("Home page + step 06: Click Login link");
-	  homePage.clickToLoginLink();
+	  homePage.clickToLoginLinkUser();
 	  
 	  System.out.println("Login page + step 07: Input exisiting email & wrong password");
 	  loginPage.inputToEmailTextbox(emailAddressTC14);
@@ -269,7 +269,7 @@ public class Level_03_Page_Object_01_Register extends BasePage{
 	  registerPage.clickToLogoutLink();
 	  
 	  System.out.println("Home page + step 06: Click Login link");
-	  homePage.clickToLoginLink();
+	  homePage.clickToLoginLinkUser();
 	  
 	  System.out.println("Login page + step 07: Input exisiting email & wrong password");
 	  loginPage.inputToEmailTextbox(emailAddress);
@@ -287,7 +287,7 @@ public class Level_03_Page_Object_01_Register extends BasePage{
   @Test
   public void TC_16_Login_With_Valid_Email_And_Valid_Password() {
 	  System.out.println("Home page + step 01: Click Login link");
-	  homePage.clickToLoginLink();
+	  homePage.clickToLoginLinkUser();
 	  
 	  System.out.println("Login page + step 02: Input exisiting email & wrong password");
 	  loginPage.inputToEmailTextbox(emailAddress);
