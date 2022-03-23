@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 import pageObject.admin.nopCommerce.AdminDashboardPageObject;
 import pageObject.admin.nopCommerce.AdminLoginPageObject;
+import pageObjects.jQuery.HomePageObject;
 
 public class PageGeneratorManager {
 	
@@ -39,5 +40,10 @@ public class PageGeneratorManager {
 	
 	public static AdminDashboardPageObject getAdminDashboardPage(WebDriver driver) {
 		return new AdminDashboardPageObject(driver);
+	}
+
+	public static HomePageObject getHomePage(WebDriver driver) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
