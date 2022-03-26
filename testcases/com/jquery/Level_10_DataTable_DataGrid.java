@@ -1,4 +1,4 @@
-package com.jquery.datatable;
+package com.jquery;
 
 import org.testng.annotations.Test;
 
@@ -72,8 +72,8 @@ public class Level_10_DataTable_DataGrid extends BaseTest {
 	 homePage.sleepInSecond(3); 
  }
  
- @Test
- public void Table_03_E_All_Rows() {
+ //@Test
+ public void Table_03_Get_All_Values_All_Page() {
 	 //Doc du lieu cua file country.txt
 	 //Luu vao 1 List<String> = Expected Value = expectedAllCountryValues
 	 
@@ -81,6 +81,84 @@ public class Level_10_DataTable_DataGrid extends BaseTest {
 	 actualAllCountryValue = homePage.getValueEachRowAtAllPage();
 	 Assert.assertEquals(actualAllCountryValue, expectedAllCountryValue);
  }
+ 
+ @Test
+ public void Table_04_Action_To_Textbox_At_Any_Row() {
+	 homePage.clickToLoadButton();
+	 homePage.sleepInSecond(5);
+	 
+	 homePage.enterToTextboxAtRowNumberByColumnName("Album","1","Khan Album");
+	 homePage.enterToTextboxAtRowNumberByColumnName("Artist","2","Khan Artist");
+	 homePage.enterToTextboxAtRowNumberByColumnName("Year","3","1983");
+	 homePage.enterToTextboxAtRowNumberByColumnName("Price","4","199");
+	 homePage.selectDropDowAtRowNumberByColumnName("Origin","5","US");
+	 
+	 
+	 //Value de nhap lieu - tham so 1
+	 //Row number: tai row nào
+	 //Ex: nhap vao textbox tai dong so 3/5/5
+	 //Column name: Album/Artist/Year/Price
+	 //Du lieu truyen vao: column name, cot nào, giá trị
+	 //Album: ten cot
+	 //1: dòng nào rowNumber
+	 //Michel 97: nhap value gì? 
+	 
+	 //homePage.enterToTextboxAtRowNumberByColumnName("Album","1","Michel 97");
+	 
+	 //homePage.enterToTextboxAtRowNumberByColumnName("Artist","2","Michel ");
+
+	 //homePage.enterToTextboxAtRowNumberByColumnName("Year","3","1997");
+	 
+	 //homePage.enterToTextboxAtRowNumberByColumnName("Price","4","97");
+	 
+	 //Chon 1 value trong dropdown Origin 
+	 //homePage.selectDropDowAtRowNumberByColumnName("Origin","1","Hong Kong");
+	 //homePage.sleepInSecond(3);
+	 
+	 //homePage.selectDropDowAtRowNumberByColumnName("Origin","5","US");
+	 //homePage.sleepInSecond(3);
+	 
+	 //Click on checkbox 'With Poster?'
+	 homePage.checkOnCheckboxAtRowNumberByColumnName("With Poster?","3");
+	 homePage.sleepInSecond(3);
+	 homePage.checkOnCheckboxAtRowNumberByColumnName("With Poster?","5");
+	 homePage.sleepInSecond(3);
+	 
+	 homePage.uncheckOnCheckboxAtRowNumberByColumnName("With Poster?","1");
+	 homePage.sleepInSecond(3);
+	 homePage.uncheckOnCheckboxAtRowNumberByColumnName("With Poster?","2");
+	 homePage.sleepInSecond(3);
+	 homePage.uncheckOnCheckboxAtRowNumberByColumnName("With Poster?","4");
+	 homePage.sleepInSecond(3);
+	 
+	 //Action
+	 homePage.clickToIconByRowNumber("1","Remove Current Row");
+	 homePage.sleepInSecond(2);
+	 
+	 homePage.clickToIconByRowNumber("1","Insert Row Above");
+	 homePage.sleepInSecond(2);
+	 
+	 homePage.clickToIconByRowNumber("3","Move Up");
+	 homePage.sleepInSecond(2);
+	 
+	 homePage.clickToIconByRowNumber("5","Remove Current Row");
+	 homePage.sleepInSecond(2);
+	 
+	 homePage.clickToIconByRowNumber("4","Remove Current Row");
+	 homePage.sleepInSecond(2);
+	 
+	 homePage.clickToIconByRowNumber("3","Remove Current Row");
+	 homePage.sleepInSecond(2);
+	 
+	 homePage.clickToIconByRowNumber("2","Remove Current Row");
+	 homePage.sleepInSecond(2);
+	 
+	 homePage.clickToIconByRowNumber("1","Remove Current Row");
+	 homePage.sleepInSecond(2);
+	 
+	 
+ }
+	
    
   @AfterClass
 	public void afterClass() {
