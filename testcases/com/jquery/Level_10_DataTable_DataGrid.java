@@ -12,8 +12,8 @@ import pageObject.portal.nopCommerce.UserLoginPageObject;
 import pageObject.portal.nopCommerce.UserMyProductReviewPageObject;
 import pageObject.portal.nopCommerce.UserRegisterPageObject;
 import pageObject.portal.nopCommerce.UserRewardPointPageObject;
-import pageObjects.jQuery.HomePageObject;
-import pageObjects.jQuery.PageGeneratorManager_JQuery;
+import pageObjects.jQuery.dataTable.HomePageObject;
+import pageObjects.jQuery.dataTable.PageGeneratorManager_JQuery;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;

@@ -10,7 +10,7 @@ public class GlobalConstants {
 	public static final String OS_NAME = System.getProperty("os.name");
 	
 	//Windown - Linux - Mac co the dung dc path này 	
-	public static final String UPLOAD_FILE = PROJECT_PATH + File.separator + "uploadFiles";
+	public static final String UPLOAD_FILE = PROJECT_PATH + File.separator + "uploadFiles" + File.separator;
 	//Tro ve 1 thu muc mac dinh cua user e.g: Download
 	public static final String DOWNLOAD_FILE = PROJECT_PATH + File.separator + "downloadFiles";
 	//Browser log
@@ -30,7 +30,7 @@ public class GlobalConstants {
 	public static final String DB_TEST_PASS = "123456";
 	
 	public static final long SHORT_TIMEOUT = 5;
-	public static final long LONG_TIMEOUT = 10;
+	public static final long LONG_TIMEOUT = 30;
 	public static final long RETRY_TEST_FAIL = 3;
 	
 

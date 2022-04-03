@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 import pageObject.admin.nopCommerce.AdminDashboardPageObject;
 import pageObject.admin.nopCommerce.AdminLoginPageObject;
-import pageObjects.jQuery.HomePageObject;
+import pageObjects.jQuery.dataTable.HomePageObject;
 
 public class PageGeneratorManager {
 	
