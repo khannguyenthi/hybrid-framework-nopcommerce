@@ -3,6 +3,8 @@ package commons;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -15,14 +17,21 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTestLiveGuru {
 	private WebDriver driver;
+	protected final Log log;
 	private String projectPath = System.getProperty("user.dir");
 	
-	protected WebDriver getBrowserDriver(String browserName) {
-		 if(browserName.equals("firefox")) {
+	protected BaseTestLiveGuru() {
+		log = LogFactory.getLog(getClass());
+	}
+	
+	protected WebDriver getBrowserDriver(String browserName, String appUrl) {
+		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
+		
+		 if(browserList == BrowserList.FIREFOX) {
 			 WebDriverManager.firefoxdriver().setup();
 			 driver = new FirefoxDriver();
 		 } 
-		 else if (browserName.equals("h_firefox")) {
+		 else if (browserList == BrowserList.H_FIREFOX) {
 			 WebDriverManager.firefoxdriver().setup();
 			 FirefoxOptions options = new FirefoxOptions();
 			 options.addArguments("--headless");
@@ -30,22 +39,22 @@ public class BaseTestLiveGuru {
 			 driver = new FirefoxDriver(options);
 		 }
 		 
-		 else if(browserName.equals("chrome")) {
+		 else if(browserList == BrowserList.CHROME) {
 			 WebDriverManager.chromedriver().setup();
 			 driver = new ChromeDriver();
 		 }
-		 else if(browserName.equals("h_chrome")) {
+		 else if(browserList == BrowserList.H_CHROME) {
 			 WebDriverManager.chromedriver().setup();
 			 ChromeOptions options = new ChromeOptions();
 			 options.addArguments("-headless");
 			 options.addArguments("window-size=1920*1080");
 			 driver = new ChromeDriver(options);
 		 }
-		 else if(browserName.equals("opera")) {
+		 else if(browserList == BrowserList.OPERA) {
 			 WebDriverManager.operadriver().setup();
 			 driver = new OperaDriver();
 		 }
-		 else if(browserName.equals("edge")) {
+		 else if(browserList == BrowserList.EDGE) {
 			 WebDriverManager.edgedriver().setup();
 			 driver = new EdgeDriver();
 		 } else {
@@ -53,9 +62,10 @@ public class BaseTestLiveGuru {
 		 }
 		 
 		 driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		 driver.get("http://live.techpanda.org/");	
+		 driver.get(appUrl);	
 		 return driver;
 	}
+	
 	protected int generateFakeNumber() {
 		  Random rand = new Random();
 		  return rand.nextInt(9999);

@@ -27,10 +27,10 @@ import org.testng.annotations.AfterClass;
 
 public class Level_07_Switch_Page extends BaseTestNopCommerce{
 	
-	 @Parameters("browser")
+	@Parameters({"browser","url"})
 	 @BeforeClass 
-	  public void beforeClass(String browserName) {
-		 driver = getBrowserDriver(browserName);	 
+	  public void beforeClass(String browserName, String appUrl) {
+		 driver = getBrowserDriver(browserName, appUrl);		 
 		 
 		 // 1  using for pre-condition case. 
 		 //homePage = new HomePageObject(driver);

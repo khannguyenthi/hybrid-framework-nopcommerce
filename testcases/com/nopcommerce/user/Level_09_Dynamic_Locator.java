@@ -27,10 +27,10 @@ import org.testng.annotations.AfterClass;
 
 public class Level_09_Dynamic_Locator extends BaseTestNopCommerce{
 	
-	 @Parameters("browser")
+	@Parameters({"browser","url"})
 	 @BeforeClass 
-	  public void beforeClass(String browserName) {
-		 driver = getBrowserDriver(browserName);	 
+	  public void beforeClass(String browserName, String appUrl) {
+		 driver = getBrowserDriver(browserName, appUrl);		 
 		 
 		 // 1  using for pre-condition case. 
 		 //homePage = new HomePageObject(driver);
@@ -46,36 +46,36 @@ public class Level_09_Dynamic_Locator extends BaseTestNopCommerce{
  @Test
   public void User_01_Regiser_Login() {
 	  
-	 System.out.println("User 01 Register: Step 01 - Click to Register link");
+	 log.info("User 01 Register: Step 01 - Click to Register link");
 	 registerPage = homePage.clickToRegisterLink(); 
 	  
-	  System.out.println("User 01 Register: Step 02 - Input  to required fields");
+	 log.info("User 01 Register: Step 02 - Input  to required fields");
 	  registerPage.inputToFirstNameTextbox(firstName);
 	  registerPage.inputToLastNameTextbox(lastName);
 	  registerPage.inputToEmailTextbox(emailAddress);
 	  registerPage.inputToPasswordTextbox(password);
 	  registerPage.inputToConfirmPasswordTextbox(password);
 	  
-	  System.out.println("User 01 Register:  Step 03 - Click to Regiser button");
+	  log.info("User 01 Register:  Step 03 - Click to Regiser button");
 	  registerPage.clickToRegisterButton();
 
-	  System.out.println("User 01 Register: Step 04 - Verify success message displayed");
+	  log.info("User 01 Register: Step 04 - Verify success message displayed");
 	  Assert.assertEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed");  
 	  
-	  System.out.println("User 01 Register: Step 05 - Click to Logout link");
+	  log.info("User 01 Register: Step 05 - Click to Logout link");
 	  homePage = registerPage.clickToLogoutLink();  	  
   
-	  System.out.println("User 02 + step 01: Click Login link");
+	  log.info("User 02 + step 01: Click Login link");
 	  loginPage = homePage.clickToLoginLinkUser();
 	  
-	  System.out.println("User 02  + step 02: Input exisiting email & wrong password");
+	  log.info("User 02  + step 02: Input exisiting email & wrong password");
 	  loginPage.inputToEmailTextbox(emailAddress);
 	  loginPage.inputToPasswordTextbox(password);
 	  
-	  System.out.println("User 02  + step 03: Click Login button");
+	  log.info("User 02  + step 03: Click Login button");
 	  homePage = loginPage.clickToLoginButton();
 	  
-	  System.out.println("User 02  + step 04: Verify My Account link display");
+	  log.info("User 02  + step 04: Verify My Account link display");
 	
 	  Assert.assertTrue(homePage.isMyAccountLinkDisplayed());
 	       

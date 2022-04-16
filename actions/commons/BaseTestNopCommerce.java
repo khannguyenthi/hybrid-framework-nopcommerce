@@ -3,6 +3,8 @@ package commons;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -17,9 +19,15 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTestNopCommerce {
 	private WebDriver driver;
+	
+	protected final Log log;
 	private String projectPath = System.getProperty("user.dir");
 	
-	protected WebDriver getBrowserDriver(String browserName) {
+	protected BaseTestNopCommerce() {
+		log = LogFactory.getLog(getClass());
+	}
+	
+	protected WebDriver getBrowserDriver(String browserName, String appUrl) {
 		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
 		
 		 if(browserList == BrowserList.FIREFOX) {
@@ -57,8 +65,12 @@ public class BaseTestNopCommerce {
 		 }
 		 
 		 driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		 driver.get(GlobalConstants.PORTAL_PAGE_URL);	
+		 driver.get(appUrl);	
 		 return driver;
+	}
+	
+	public WebDriver getDriverInstance() {
+		return this.driver;
 	}
 	
 	private String getEnvironmentUrl(String serverName) {

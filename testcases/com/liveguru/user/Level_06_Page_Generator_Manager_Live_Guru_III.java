@@ -32,10 +32,10 @@ import org.testng.annotations.AfterClass;
 
 public class Level_06_Page_Generator_Manager_Live_Guru_III extends BaseTestLiveGuru {
 	
-	 @Parameters("browser")
+	@Parameters({"browser","url"})
 	 @BeforeClass 
-	  public void beforeClass(String browserName) {
-		 driver = getBrowserDriver(browserName);	 
+	  public void beforeClass(String browserName, String appUrl) {
+		 driver = getBrowserDriver(browserName, appUrl);	
 		 homePage = PageGeneratorManager_Live_Guru.getHomePage(driver);
 		
 		 firstName = "Khan";

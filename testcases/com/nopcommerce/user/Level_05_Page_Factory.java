@@ -27,10 +27,10 @@ public class Level_05_Page_Factory extends BaseTestNopCommerce{
 	private RegisterPageObject registerPage;
 	private LoginPageObject loginPage;
 
-	@Parameters("browser")
+	@Parameters({"browser","url"})
 	 @BeforeClass 
-	  public void beforeClass(String browserName) {
-		driver = getBrowserDriver(browserName); 
+	  public void beforeClass(String browserName, String appUrl) {
+		 driver = getBrowserDriver(browserName, appUrl);	
 		 
 		 homePage = new HomePageObject(driver);
 		 loginPage = new LoginPageObject(driver);

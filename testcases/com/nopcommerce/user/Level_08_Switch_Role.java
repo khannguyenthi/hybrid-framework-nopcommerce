@@ -30,10 +30,10 @@ import org.testng.annotations.AfterClass;
 
 public class Level_08_Switch_Role extends BaseTestNopCommerce{
 	
-	 @Parameters("browser")
+	@Parameters({"browser","url"})
 	 @BeforeClass 
-	  public void beforeClass(String browserName) {
-		 driver = getBrowserDriver(browserName);	 
+	  public void beforeClass(String browserName, String appUrl) {
+		 driver = getBrowserDriver(browserName, appUrl);		 
 		 
 		 // 1  using for pre-condition case. 
 		 //homePage = new HomePageObject(driver);
@@ -46,23 +46,23 @@ public class Level_08_Switch_Role extends BaseTestNopCommerce{
 		 userPassword = "123456";
 		 
 		 //Pre-condition: 
-		 System.out.println("User 01 Register: Step 01 - Click to Register link");
+		 log.info("User 01 Register: Step 01 - Click to Register link");
 		 registerPage = userHomePage.clickToRegisterLink(); 
 		  
-		  System.out.println("User 01 Register: Step 02 - Input  to required fields");
+		 log.info("User 01 Register: Step 02 - Input  to required fields");
 		  registerPage.inputToFirstNameTextbox(firstName);
 		  registerPage.inputToLastNameTextbox(lastName);
 		  registerPage.inputToEmailTextbox(userEmailAddress);
 		  registerPage.inputToPasswordTextbox(userPassword);
 		  registerPage.inputToConfirmPasswordTextbox(userPassword);
 		  
-		  System.out.println("User 01 Register:  Step 03 - Click to Regiser button");
+		  log.info("User 01 Register:  Step 03 - Click to Regiser button");
 		  registerPage.clickToRegisterButton();
 
-		  System.out.println("User 01 Register: Step 04 - Verify success message displayed");
+		  log.info("User 01 Register: Step 04 - Verify success message displayed");
 		  Assert.assertEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed");  
 		  
-		  System.out.println("User 01 Register: Step 05 - Click to Logout link");
+		  log.info("User 01 Register: Step 05 - Click to Logout link");
 		  userHomePage = registerPage.clickToLogoutLink();  
 		  
 		  adminEmailAddress = "admin@yourstore.com";

@@ -28,10 +28,10 @@ public class Level_06_Page_Generator_Manager_II extends BaseTestNopCommerce{
 	private UserLoginPageObject loginPage;
 	private UserRegisterPageObject registerPage;
 
-	 @Parameters("browser")
+	@Parameters({"browser","url"})
 	 @BeforeClass 
-	  public void beforeClass(String browserName) {
-		 driver = getBrowserDriver(browserName);	 
+	  public void beforeClass(String browserName, String appUrl) {
+		 driver = getBrowserDriver(browserName, appUrl);		 
 		 
 		 // 1  using for pre-condition case. 
 		 homePage = new UserHomePageObject(driver);
