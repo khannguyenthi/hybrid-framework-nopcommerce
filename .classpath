@@ -44,18 +44,17 @@
 	<classpathentry kind="lib" path="libSelenium/testng-6.14.3.jar" sourcepath="libSelenium/testng-6.14.3-sources.jar"/>
 	<classpathentry kind="lib" path="libSelenium/testng-6.14.3-sources.jar"/>
 	<classpathentry kind="lib" path="libLog4J/commons-lang3-3.8.1.jar"/>
-	<classpathentry kind="lib" path="libLog4J/commons-logging-1.2.jar"/>
 	<classpathentry kind="lib" path="libLog4J/log4j-1.2.16.jar"/>
 	<classpathentry kind="lib" path="libWebDriverManager5/commons-lang-2.6.jar"/>
 	<classpathentry kind="lib" path="libReportNG/commons-collections-3.2.1.jar"/>
 	<classpathentry kind="lib" path="libReportNG/guice-3.0.jar"/>
 	<classpathentry kind="lib" path="libReportNG/reportng-1.1.4.jar"/>
 	<classpathentry kind="lib" path="libReportNG/velocity-1.4.jar"/>
-	<classpathentry kind="lib" path="libExtendV2/bson-3.0.4.jar"/>
-	<classpathentry kind="lib" path="libExtendV2/extentreports-2.41.2.jar"/>
-	<classpathentry kind="lib" path="libExtendV2/freemarker-2.3.23.jar"/>
-	<classpathentry kind="lib" path="libExtendV2/mongodb-driver-3.0.4.jar"/>
-	<classpathentry kind="lib" path="libExtendV2/mongodb-driver-core-3.0.4.jar"/>
-	<classpathentry kind="lib" path="libExtendV2/sqlite-jdbc-3.8.11.1.jar"/>
+	<classpathentry kind="lib" path="libExtentV3/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="libExtentV5/extentreports-5.0.8.jar"/>
+	<classpathentry kind="lib" path="libExtentV5/lombok-1.18.12.jar"/>
+	<classpathentry kind="lib" path="libExtentV5/reactive-streams-1.0.3.jar"/>
+	<classpathentry kind="lib" path="libExtentV5/rxjava-3.0.4.jar"/>
+	<classpathentry kind="lib" path="libExtentV5/freemarker-2.3.30.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

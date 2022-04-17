@@ -1,0 +1,260 @@
+[2022-04-05 21:26:52,379] Login - Step 01: Click to Creat New Account Btn
+[2022-04-05 21:26:52,725] Login - Step 02: Check email field
+[2022-04-05 21:26:53,331] Login - Step 3: fill email field
+[2022-04-05 21:26:56,464] Login - Step 4: fill confirm email field
+[2022-04-05 21:28:41,611] Login - Step 01: Click to Creat New Account Btn
+[2022-04-05 21:28:41,925] Login - Step 02: Check email field
+[2022-04-05 21:28:42,240] Login - Step 3: fill email field
+[2022-04-05 21:28:45,372] Login - Step 4: fill confirm email field
+[2022-04-05 21:47:27,850] Login - Step 01: Click to Creat New Account Btn
+[2022-04-05 21:47:28,238] Login - Step 02: Check email field
+[2022-04-05 21:47:28,647] Login - Step 3: fill email field:
+[2022-04-05 21:47:31,781] Login - Step 4: fill confirm email field
+[2022-04-12 05:29:36,938] Login - Step 01: Click to Creat New Account Btn
+[2022-04-12 05:29:37,312] Login - Step 02: Check email field
+[2022-04-12 05:29:37,786] Login - Step 3: fill email field:
+[2022-04-12 05:29:40,956] Login - Step 4: fill confirm email field
+[2022-04-12 12:48:57,580] Login - Step 01: Click to Creat New Account Btn
+[2022-04-12 12:48:57,881] Login - Step 02: Check email field
+[2022-04-12 12:48:58,373] Login - Step 3: fill email field:
+[2022-04-12 12:49:01,476] Login - Step 4: fill confirm email field
+[2022-04-15 09:55:31,742] Login - Step 01: Click to Creat New Account Btn
+[2022-04-15 09:55:32,100] Login - Step 02: Check email field
+[2022-04-15 09:55:32,866] Login - Step 3: fill email field:
+[2022-04-15 09:55:35,977] Login - Step 4: fill confirm email field
+[2022-04-15 10:07:01,563] Login - Step 01: Click to Creat New Account Btn
+[2022-04-15 10:07:01,884] Login - Step 02: Check email field
+[2022-04-15 10:07:02,528] Login - Step 3: fill email field:
+[2022-04-15 10:07:05,639] Login - Step 4: fill confirm email field
+[2022-04-15 11:51:08,419] User 01 Register: Step 01 - Click to Register link
+[2022-04-15 11:51:09,220] User 01 Register: Step 02 - Input  to required fields
+[2022-04-15 11:51:10,019] User 01 Register:  Step 03 - Click to Regiser button
+[2022-04-15 11:51:10,964] User 01 Register: Step 04 - Verify success message displayed
+[2022-04-15 11:51:11,052] User 01 Register: Step 05 - Click to Logout link
+[2022-04-15 11:51:27,187] User 01 Register: Step 01 - Click to Register link
+[2022-04-15 11:51:27,958] User 01 Register: Step 02 - Input  to required fields
+[2022-04-15 11:51:28,378] User 01 Register:  Step 03 - Click to Regiser button
+[2022-04-15 11:51:29,319] User 01 Register: Step 04 - Verify success message displayed
+[2022-04-15 11:51:29,391] User 01 Register: Step 05 - Click to Logout link
+[2022-04-15 11:51:30,169] User 02 + step 01: Click Login link
+[2022-04-15 11:51:30,835] User 02  + step 02: Input exisiting email & wrong password
+[2022-04-15 11:51:31,018] User 02  + step 03: Click Login button
+[2022-04-15 11:51:32,065] User 02  + step 04: Verify My Account link display
+[2022-04-15 14:55:35,312] Login - Step 01: Click to Creat New Account Btn
+[2022-04-15 14:55:35,642] Login - Step 02: Check email field
+[2022-04-15 14:55:36,312] Login - Step 3: fill email field:
+[2022-04-15 14:55:39,431] Login - Step 4: fill confirm email field
+[2022-04-15 15:02:25,408] User 01 Register: Step 01 - Click to Register link
+[2022-04-15 15:02:26,506] User 01 Register: Step 02 - Input  to required fields
+[2022-04-15 15:02:27,318] User 01 Register:  Step 03 - Click to Regiser button
+[2022-04-15 15:02:28,397] User 01 Register: Step 04 - Verify success message displayed
+[2022-04-15 15:02:28,486] User 01 Register: Step 05 - Click to Logout link
+[2022-04-15 15:02:51,096] User 01 Register: Step 01 - Click to Register link
+[2022-04-15 15:02:51,752] User 01 Register: Step 02 - Input  to required fields
+[2022-04-15 15:02:52,221] User 01 Register:  Step 03 - Click to Regiser button
+[2022-04-15 15:02:53,169] User 01 Register: Step 04 - Verify success message displayed
+[2022-04-15 15:02:53,241] User 01 Register: Step 05 - Click to Logout link
+[2022-04-15 15:02:54,002] User 02 + step 01: Click Login link
+[2022-04-15 15:02:54,542] User 02  + step 02: Input exisiting email & wrong password
+[2022-04-15 15:02:54,718] User 02  + step 03: Click Login button
+[2022-04-15 15:02:55,810] User 02  + step 04: Verify My Account link display
+[2022-04-15 15:17:10,193] User 01 Register: Step 01 - Click to Register link
+[2022-04-15 15:17:10,858] User 01 Register: Step 02 - Input  to required fields
+[2022-04-15 15:17:11,634] User 01 Register:  Step 03 - Click to Regiser button
+[2022-04-15 15:17:12,612] User 01 Register: Step 04 - Verify success message displayed
+[2022-04-15 15:17:12,692] User 01 Register: Step 05 - Click to Logout link
+[2022-04-15 15:17:27,084] User 01 Register: Step 01 - Click to Register link
+[2022-04-15 15:17:27,694] User 01 Register: Step 02 - Input  to required fields
+[2022-04-15 15:17:28,181] User 01 Register:  Step 03 - Click to Regiser button
+[2022-04-15 15:17:29,234] User 01 Register: Step 04 - Verify success message displayed
+[2022-04-15 15:17:29,303] User 01 Register: Step 05 - Click to Logout link
+[2022-04-15 15:17:30,097] User 02 + step 01: Click Login link
+[2022-04-15 15:17:31,076] User 02  + step 02: Input exisiting email & wrong password
+[2022-04-15 15:17:31,265] User 02  + step 03: Click Login button
+[2022-04-15 15:17:32,044] User 02  + step 04: Verify My Account link display
+[2022-04-15 21:10:23,730] Register - Step 01: Navigate to 'Register page'
+[2022-04-15 21:10:24,470] Register - Step 02: Enter to Firstname textbox with value is 'Khan'
+[2022-04-15 21:10:24,555] Register - Step 02: Enter to Lastname textbox with value is 'Auto'
+[2022-04-15 21:10:24,646] Register - Step 02: Enter to Emailaddress textbox with value is 'khan4684@gmail.com'
+[2022-04-15 21:10:24,731] Register - Step 02: Enter to Password textbox with value is '123456'
+[2022-04-15 21:10:24,813] Register - Step 02: Enter to Confirm Password textbox with value is '123456'
+[2022-04-15 21:10:24,908] Register - Step 03: Click Register Button
+[2022-04-15 21:10:25,858] Register - Step 04: Verify success message displayed...
+[2022-04-15 21:10:25,912] Register - Step 05: Click logout link
+[2022-04-15 21:10:26,849] Login - Step 06: Click Login link
+[2022-04-15 21:10:28,998] Login - Step 07: Click Login link
+[2022-04-15 21:10:29,171] Login - Step 08: Click Login link
+[2022-04-15 21:10:30,009] Login - Step 09: Verify My Account link display
+[2022-04-15 21:10:30,073] Login - Step 09: Verify Customer Info link display
+[2022-04-16 04:41:14,096] Register - Step 01: Navigate to 'Register page'
+[2022-04-16 04:41:14,720] Register - Step 02: Enter to Firstname textbox with value is 'Khan'
+[2022-04-16 04:41:14,806] Register - Step 02: Enter to Lastname textbox with value is 'Auto'
+[2022-04-16 04:41:14,887] Register - Step 02: Enter to Emailaddress textbox with value is 'khan833@gmail.com'
+[2022-04-16 04:41:14,980] Register - Step 02: Enter to Password textbox with value is '123456'
+[2022-04-16 04:41:15,083] Register - Step 02: Enter to Confirm Password textbox with value is '123456'
+[2022-04-16 04:41:15,175] Register - Step 03: Click Register Button
+[2022-04-16 04:41:16,032] Register - Step 04: Verify success message displayed...
+[2022-04-16 04:41:16,097] Register - Step 05: Click logout link
+[2022-04-16 04:41:16,856] Login - Step 06: Click Login link
+[2022-04-16 04:41:17,450] Login - Step 07: Click Login link
+[2022-04-16 04:41:17,636] Login - Step 08: Click Login link
+[2022-04-16 04:41:18,418] Login - Step 09: Verify My Account link display
+[2022-04-16 04:41:18,492] Login - Step 09: Verify Customer Info link display
+[2022-04-16 04:53:59,880] Register - Step 01: Navigate to 'Register page'
+[2022-04-16 04:54:00,554] Register - Step 02: Enter to Firstname textbox with value is 'Khan'
+[2022-04-16 04:54:00,647] Register - Step 02: Enter to Lastname textbox with value is 'Auto'
+[2022-04-16 04:54:00,756] Register - Step 02: Enter to Emailaddress textbox with value is 'khan1174@gmail.com'
+[2022-04-16 04:54:00,851] Register - Step 02: Enter to Password textbox with value is '123456'
+[2022-04-16 04:54:00,934] Register - Step 02: Enter to Confirm Password textbox with value is '123456'
+[2022-04-16 04:54:01,012] Register - Step 03: Click Register Button
+[2022-04-16 04:54:01,919] Register - Step 04: Verify success message displayed...
+[2022-04-16 04:54:01,987] Register - Step 05: Click logout link
+[2022-04-16 04:54:02,718] Login - Step 06: Click Login link
+[2022-04-16 04:54:03,295] Login - Step 07: Click Login link
+[2022-04-16 04:54:03,465] Login - Step 08: Click Login link
+[2022-04-16 04:54:04,228] Login - Step 09: Verify My Account link display
+[2022-04-16 04:54:04,294] Login - Step 09: Verify Customer Info link display
+[2022-04-16 04:56:24,317] Register - Step 01: Navigate to 'Register page'
+[2022-04-16 04:56:24,968] Register - Step 02: Enter to Firstname textbox with value is 'Khan'
+[2022-04-16 04:56:25,051] Register - Step 02: Enter to Lastname textbox with value is 'Auto'
+[2022-04-16 04:56:25,164] Register - Step 02: Enter to Emailaddress textbox with value is 'khan2920@gmail.com'
+[2022-04-16 04:56:25,295] Register - Step 02: Enter to Password textbox with value is '123456'
+[2022-04-16 04:56:25,369] Register - Step 02: Enter to Confirm Password textbox with value is '123456'
+[2022-04-16 04:56:25,445] Register - Step 03: Click Register Button
+[2022-04-16 04:56:26,327] Register - Step 04: Verify success message displayed...
+[2022-04-16 04:56:26,386] Register - Step 05: Click logout link
+[2022-04-16 04:56:27,166] Login - Step 06: Click Login link
+[2022-04-16 04:56:27,743] Login - Step 07: Click Login link
+[2022-04-16 04:56:27,924] Login - Step 08: Click Login link
+[2022-04-16 04:56:28,748] Login - Step 09: Verify My Account link display
+[2022-04-16 04:56:28,817] Login - Step 09: Verify Customer Info link display
+[2022-04-16 04:57:31,896] Register - Step 01: Navigate to 'Register page'
+[2022-04-16 04:57:32,470] Register - Step 02: Enter to Firstname textbox with value is 'Khan'
+[2022-04-16 04:57:32,607] Register - Step 02: Enter to Lastname textbox with value is 'Auto'
+[2022-04-16 04:57:32,707] Register - Step 02: Enter to Emailaddress textbox with value is 'khan2947@gmail.com'
+[2022-04-16 04:57:32,798] Register - Step 02: Enter to Password textbox with value is '123456'
+[2022-04-16 04:57:32,897] Register - Step 02: Enter to Confirm Password textbox with value is '123456'
+[2022-04-16 04:57:33,033] Register - Step 03: Click Register Button
+[2022-04-16 04:57:33,896] Register - Step 04: Verify success message displayed...
+[2022-04-16 04:57:33,980] Register - Step 05: Click logout link
+[2022-04-16 04:57:34,713] Login - Step 06: Click Login link
+[2022-04-16 04:57:35,273] Login - Step 07: Click Login link
+[2022-04-16 04:57:35,453] Login - Step 08: Click Login link
+[2022-04-16 04:57:36,197] Login - Step 09: Verify My Account link display
+[2022-04-16 04:57:36,267] Login - Step 09: Verify Customer Info link display
+[2022-04-16 04:59:52,197] User 01 Register: Step 01 - Click to Register link
+[2022-04-16 04:59:52,804] User 01 Register: Step 02 - Input  to required fields
+[2022-04-16 04:59:53,552] User 01 Register:  Step 03 - Click to Regiser button
+[2022-04-16 04:59:54,529] User 01 Register: Step 04 - Verify success message displayed
+[2022-04-16 04:59:54,611] User 01 Register: Step 05 - Click to Logout link
+[2022-04-16 05:00:19,769] Register - Step 01: Navigate to 'Register page'
+[2022-04-16 05:00:20,474] Register - Step 02: Enter to Firstname textbox with value is 'Khan'
+[2022-04-16 05:00:20,571] Register - Step 02: Enter to Lastname textbox with value is 'Auto'
+[2022-04-16 05:00:20,660] Register - Step 02: Enter to Emailaddress textbox with value is 'khan905@gmail.com'
+[2022-04-16 05:00:20,798] Register - Step 02: Enter to Password textbox with value is '123456'
+[2022-04-16 05:00:20,918] Register - Step 02: Enter to Confirm Password textbox with value is '123456'
+[2022-04-16 05:00:21,023] Register - Step 03: Click Register Button
+[2022-04-16 05:00:21,931] Register - Step 04: Verify success message displayed...
+[2022-04-16 05:00:21,980] Register - Step 05: Click logout link
+[2022-04-16 05:00:22,722] Login - Step 06: Click Login link
+[2022-04-16 05:00:23,293] Login - Step 07: Click Login link
+[2022-04-16 05:00:23,466] Login - Step 08: Click Login link
+[2022-04-16 05:00:24,231] Login - Step 09: Verify My Account link display
+[2022-04-16 05:00:24,305] Login - Step 09: Verify Customer Info link display
+[2022-04-16 05:09:27,653] Register - Step 01: Navigate to 'Register page'
+[2022-04-16 05:09:28,263] Register - Step 02: Enter to Firstname textbox with value is 'Khan'
+[2022-04-16 05:09:28,344] Register - Step 02: Enter to Lastname textbox with value is 'Auto'
+[2022-04-16 05:09:28,419] Register - Step 02: Enter to Emailaddress textbox with value is 'khan3212@gmail.com'
+[2022-04-16 05:09:28,503] Register - Step 02: Enter to Password textbox with value is '123456'
+[2022-04-16 05:09:28,613] Register - Step 02: Enter to Confirm Password textbox with value is '123456'
+[2022-04-16 05:09:28,735] Register - Step 03: Click Register Button
+[2022-04-16 05:09:29,676] Register - Step 04: Verify success message displayed...
+[2022-04-16 05:09:29,734] Register - Step 05: Click logout link
+[2022-04-16 05:09:30,498] Login - Step 06: Click Login link
+[2022-04-16 05:09:31,006] Login - Step 07: Click Login link
+[2022-04-16 05:09:31,187] Login - Step 08: Click Login link
+[2022-04-16 05:09:31,962] Login - Step 09: Verify My Account link display
+[2022-04-16 05:19:12,289] Register - Step 01: Navigate to 'Register page'
+[2022-04-16 05:19:12,874] Register - Step 02: Enter to Firstname textbox with value is 'Khan'
+[2022-04-16 05:19:13,026] Register - Step 02: Enter to Lastname textbox with value is 'Auto'
+[2022-04-16 05:19:13,107] Register - Step 02: Enter to Emailaddress textbox with value is 'khan3222@gmail.com'
+[2022-04-16 05:19:13,189] Register - Step 02: Enter to Password textbox with value is '123456'
+[2022-04-16 05:19:13,273] Register - Step 02: Enter to Confirm Password textbox with value is '123456'
+[2022-04-16 05:19:13,363] Register - Step 03: Click Register Button
+[2022-04-16 05:19:14,272] Register - Step 04: Verify success message displayed...
+[2022-04-16 05:19:14,353] Register - Step 05: Click logout link
+[2022-04-16 05:19:15,124] Login - Step 06: Click Login link
+[2022-04-16 05:19:15,669] Login - Step 07: Click Login link
+[2022-04-16 05:19:15,832] Login - Step 08: Click Login link
+[2022-04-16 05:19:16,617] Login - Step 09: Verify My Account link display
+[2022-04-16 05:19:16,698] Login - Step 09: Verify Customer Info link display
+[2022-04-16 05:29:11,886] Register - Step 01: Navigate to 'Register page'
+[2022-04-16 05:29:12,505] Register - Step 02: Enter to Firstname textbox with value is 'Khan'
+[2022-04-16 05:29:12,592] Register - Step 02: Enter to Lastname textbox with value is 'Auto'
+[2022-04-16 05:29:12,686] Register - Step 02: Enter to Emailaddress textbox with value is 'khan4601@gmail.com'
+[2022-04-16 05:29:12,780] Register - Step 02: Enter to Password textbox with value is '123456'
+[2022-04-16 05:29:12,864] Register - Step 02: Enter to Confirm Password textbox with value is '123456'
+[2022-04-16 05:29:12,944] Register - Step 03: Click Register Button
+[2022-04-16 05:29:13,850] Register - Step 04: Verify success message displayed...
+[2022-04-16 05:29:13,896] Register - Step 05: Click logout link
+[2022-04-16 05:29:14,667] Login - Step 06: Click Login link
+[2022-04-16 05:29:15,220] Login - Step 07: Click Login link
+[2022-04-16 05:29:15,404] Login - Step 08: Click Login link
+[2022-04-16 05:29:16,190] Login - Step 09: Verify My Account link display
+[2022-04-16 05:29:16,253] Login - Step 09: Verify Customer Info link display
+[2022-04-16 05:45:34,772] Register - Step 01: Navigate to 'Register page'
+[2022-04-16 05:45:35,634] Register - Step 02: Enter to Firstname textbox with value is 'Khan'
+[2022-04-16 05:45:35,718] Register - Step 02: Enter to Lastname textbox with value is 'Auto'
+[2022-04-16 05:45:35,807] Register - Step 02: Enter to Emailaddress textbox with value is 'khan3812@gmail.com'
+[2022-04-16 05:45:35,913] Register - Step 02: Enter to Password textbox with value is '123456'
+[2022-04-16 05:45:35,998] Register - Step 02: Enter to Confirm Password textbox with value is '123456'
+[2022-04-16 05:45:36,089] Register - Step 03: Click Register Button
+[2022-04-16 05:45:37,032] Register - Step 04: Verify success message displayed...
+[2022-04-16 05:45:37,087] Register - Step 05: Click logout link
+[2022-04-16 05:45:37,878] Login - Step 06: Click Login link
+[2022-04-16 05:45:38,469] Login - Step 07: Click Login link
+[2022-04-16 05:45:38,633] Login - Step 08: Click Login link
+[2022-04-16 05:45:39,429] Login - Step 09: Verify My Account link display
+[2022-04-16 05:45:39,496] Login - Step 09: Verify Customer Info link display
+[2022-04-16 05:50:09,357] Register - Step 01: Navigate to 'Register page'
+[2022-04-16 05:50:10,283] Register - Step 02: Enter to Firstname textbox with value is 'Khan'
+[2022-04-16 05:50:10,373] Register - Step 02: Enter to Lastname textbox with value is 'Auto'
+[2022-04-16 05:50:10,495] Register - Step 02: Enter to Emailaddress textbox with value is 'khan1399@gmail.com'
+[2022-04-16 05:50:10,595] Register - Step 02: Enter to Password textbox with value is '123456'
+[2022-04-16 05:50:10,682] Register - Step 02: Enter to Confirm Password textbox with value is '123456'
+[2022-04-16 05:50:10,770] Register - Step 03: Click Register Button
+[2022-04-16 05:50:11,722] Register - Step 04: Verify success message displayed...
+[2022-04-16 05:50:11,775] Register - Step 05: Click logout link
+[2022-04-16 05:50:12,538] Login - Step 06: Click Login link
+[2022-04-16 05:50:13,109] Login - Step 07: Click Login link
+[2022-04-16 05:50:13,311] Login - Step 08: Click Login link
+[2022-04-16 05:50:14,128] Login - Step 09: Verify My Account link display
+[2022-04-16 05:50:14,200] Login - Step 09: Verify Customer Info link display
+[2022-04-16 05:53:32,624] Register - Step 01: Navigate to 'Register page'
+[2022-04-16 05:53:33,348] Register - Step 02: Enter to Firstname textbox with value is 'Khan'
+[2022-04-16 05:53:33,429] Register - Step 02: Enter to Lastname textbox with value is 'Auto'
+[2022-04-16 05:53:33,523] Register - Step 02: Enter to Emailaddress textbox with value is 'khan2261@gmail.com'
+[2022-04-16 05:53:33,605] Register - Step 02: Enter to Password textbox with value is '123456'
+[2022-04-16 05:53:33,691] Register - Step 02: Enter to Confirm Password textbox with value is '123456'
+[2022-04-16 05:53:33,766] Register - Step 03: Click Register Button
+[2022-04-16 05:53:34,678] Register - Step 04: Verify success message displayed...
+[2022-04-16 05:53:34,725] Register - Step 05: Click logout link
+[2022-04-16 05:53:35,482] Login - Step 06: Click Login link
+[2022-04-16 05:53:36,063] Login - Step 07: Click Login link
+[2022-04-16 05:53:36,322] Login - Step 08: Click Login link
+[2022-04-16 05:53:37,176] Login - Step 09: Verify My Account link display
+[2022-04-16 05:53:37,232] Login - Step 09: Verify Customer Info link display
+[2022-04-16 06:24:18,373] Register - Step 01: Navigate to 'Register page'
+[2022-04-16 06:24:18,995] Register - Step 02: Enter to Firstname textbox with value is 'Khan'
+[2022-04-16 06:24:19,082] Register - Step 02: Enter to Lastname textbox with value is 'Auto'
+[2022-04-16 06:24:19,170] Register - Step 02: Enter to Emailaddress textbox with value is 'khan5960@gmail.com'
+[2022-04-16 06:24:19,279] Register - Step 02: Enter to Password textbox with value is '123456'
+[2022-04-16 06:24:19,363] Register - Step 02: Enter to Confirm Password textbox with value is '123456'
+[2022-04-16 06:24:19,440] Register - Step 03: Click Register Button
+[2022-04-16 06:24:20,408] Register - Step 04: Verify success message displayed...
+[2022-04-16 06:24:20,485] Register - Step 05: Click logout link
+[2022-04-16 06:24:21,273] Login - Step 06: Click Login link
+[2022-04-16 06:24:21,877] Login - Step 07: Click Login link
+[2022-04-16 06:24:22,032] Login - Step 08: Click Login link
+[2022-04-16 06:24:22,911] Login - Step 09: Verify My Account link display
+[2022-04-16 06:24:22,973] Login - Step 09: Verify Customer Info link display
