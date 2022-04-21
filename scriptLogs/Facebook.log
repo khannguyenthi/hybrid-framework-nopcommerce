@@ -258,3 +258,29 @@
 [2022-04-16 06:24:22,032] Login - Step 08: Click Login link
 [2022-04-16 06:24:22,911] Login - Step 09: Verify My Account link display
 [2022-04-16 06:24:22,973] Login - Step 09: Verify Customer Info link display
+[2022-04-19 21:13:05,837] Login - Step 01: Navigate to Login page
+[2022-04-19 21:13:06,537] Login - Step 02: Enter to email textbox with value is 'null
+[2022-04-19 21:16:22,631] Login - Step 01: Navigate to Login page
+[2022-04-19 21:16:23,287] Login - Step 02: Enter to email textbox with value is 'khan4340@gmail.com
+[2022-04-19 21:16:23,378] Login - Step 03: Enter to password textbox with value is '123456
+[2022-04-19 21:16:23,468] Login - Step 04: Click Login button
+[2022-04-19 21:16:24,302] Login - Step 04: Verify My Account link display
+[2022-04-19 21:16:24,370] Login - Step 04: Verify My Account link display
+[2022-04-19 21:16:24,447] Login - Step 04: Verify My Account link display
+[2022-04-19 21:16:24,522] Login - Step 04: Verify My Account link display
+[2022-04-19 21:16:24,583] Login - Step 04: Verify My Account link display
+[2022-04-19 21:16:24,647] Login - Step 04: Verify My Account link display
+[2022-04-19 21:28:39,966] Login - Step 01: Navigate to Login page
+[2022-04-19 21:28:40,681] Login - Step 02: Enter to email textbox with value is 'khan7119@gmail.com
+[2022-04-19 21:28:40,775] Login - Step 03: Enter to password textbox with value is '123456
+[2022-04-19 21:28:40,880] Login - Step 04: Click Login button
+[2022-04-19 21:28:41,682] Login - Step 04: Verify My Account link display
+[2022-04-19 21:28:41,746] Login - Step 04: Verify My Account link display
+[2022-04-19 21:28:41,823] Login - Step 04: Verify My Account link display
+[2022-04-19 21:28:41,899] Login - Step 04: Verify My Account link display
+[2022-04-19 21:28:41,959] Login - Step 04: Verify My Account link display
+[2022-04-19 21:28:42,023] Login - Step 04: Verify My Account link display
+[2022-04-21 05:22:42,294] Pre-condition: - Step 01: Navigate to Login page
+[2022-04-21 05:22:42,850] Pre-condition: - Step 02: Set cookies and reload page
+[2022-04-21 05:22:47,285] Pre-condition: - Step 03: Verify My Account link display
+[2022-04-21 05:22:47,390] Login - Step 09: Verify My Account link display

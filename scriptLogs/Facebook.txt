@@ -1,0 +1,4 @@
+[2022-04-21 05:22:42,294] Pre-condition: - Step 01: Navigate to Login page
+[2022-04-21 05:22:42,850] Pre-condition: - Step 02: Set cookies and reload page
+[2022-04-21 05:22:47,285] Pre-condition: - Step 03: Verify My Account link display
+[2022-04-21 05:22:47,390] Login - Step 09: Verify My Account link display
