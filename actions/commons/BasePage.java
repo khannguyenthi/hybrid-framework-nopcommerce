@@ -426,8 +426,9 @@ public class BasePage {
 		jsExecutor.executeScript("arguments[0].scrollIntoView(false);", getWebElement(driver, locatorType));
 	}
 	
-	public String getElementValueByJS(WebDriver driver, String xpathLocator) {
+	public String getElementValueByJSXpath(WebDriver driver, String xpathLocator) {
 		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+		xpathLocator = xpathLocator.replace("xpath", "");
 		return (String) jsExecutor.executeScript("return $(document.evaluate(\"" + xpathLocator + "\", document, null, XpathResult.FIRST_ORDERED_NOTE_TYPE, null).singleNodeValue).val()");
 	}
 	

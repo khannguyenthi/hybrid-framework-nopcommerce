@@ -15,8 +15,7 @@
   	<parameter name="browser" value="firefox" > </parameter>
     <classes>
     <!--  Trigger Common 01 run first -->
-    <class name="com.nopcommerce.common.Common_01_Register_Cookie"/>
-     <class name="com.nopcommerce.user.Level_16_Share_DataC"/>
+         <class name="com.nopcommerce.user.Level_17_Custom_Close_Driver"/>
        </classes>
   </test>
 </suite> 
