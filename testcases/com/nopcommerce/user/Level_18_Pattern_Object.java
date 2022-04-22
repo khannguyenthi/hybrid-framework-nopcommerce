@@ -26,7 +26,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
-public class Level_17_Custom_Close_Driver extends BaseTestNopCommerce{
+public class Level_18_Pattern_Object extends BaseTest{
 	
 	 @Parameters({"browser","url"})
 	 @BeforeClass 
@@ -42,76 +42,57 @@ public class Level_17_Custom_Close_Driver extends BaseTestNopCommerce{
 		 firstName = "Khan";
 		 lastName = "Auto";
 		 password = "123456";
-		 
-		 log.info("Register - Step 01: Navigate to 'Register page'");
-		 registerPage = homePage.clickToRegisterLink(); 
-		  
-		 log.info("Register - Step 02: Enter to Firstname textbox with value is '"+ firstName + "'");
-		  registerPage.inputToFirstNameTextbox(firstName);
-		  log.info("Register - Step 02: Enter to Lastname textbox with value is '"+ lastName + "'");
-		  registerPage.inputToLastNameTextbox(lastName);
-		  log.info("Register - Step 02: Enter to Emailaddress textbox with value is '"+ emailAddress + "'");
-		  registerPage.inputToEmailTextbox(emailAddress);
-		  log.info("Register - Step 02: Enter to Password textbox with value is '"+ password + "'");
-		  registerPage.inputToPasswordTextbox(password);
-		  log.info("Register - Step 02: Enter to Confirm Password textbox with value is '"+ password + "'");
-		  registerPage.inputToConfirmPasswordTextbox(password);
-		  
-		  log.info("Register - Step 03: Click Register Button");
-		  registerPage.clickToRegisterButton();
-
-		  log.info("Register - Step 04: Verify success message displayed...");
-		  verifyEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed...");  
-		  
-		  log.info("Register - Step 05: Click logout link");
-		  homePage = registerPage.clickToLogoutLink();  	  
-	  
-		  log.info("Login - Step 06: Click Login link");
-		  loginPage = homePage.clickToLoginLinkUser();
-		  
-		  log.info("Login - Step 07: Click Login link");
-		  loginPage.inputToEmailTextbox(emailAddress);
-		  loginPage.inputToPasswordTextbox(password);
-		  
-		  log.info("Login - Step 08: Click Login link");
-		  homePage = loginPage.clickToLoginButton();
-		  
-		  log.info("Login - Step 09: Verify My Account link display");
-		  verifyFalse(homePage.isMyAccountLinkDisplayed());
-		       
-		  log.info("Login - Step 09: Verify Customer Info link display");
-		  customerInforPage = homePage.clickToMyAccountLink();    
-		  verifyFalse(customerInforPage.isCustomerInforPageDisplayed());
+		 date = "2";
+		 month = "August";
+		 year = "1998";
 	 }
 
  @Test
-  public void User_01_Regiser_Login() {
+  public void User_01_Regiser() {
 	 log.info("Register - Step 01: Navigate to 'Register page'");
 	 registerPage = homePage.clickToRegisterLink(); 
 	  
 	 log.info("Register - Step 02: Enter to Firstname textbox with value is '"+ firstName + "'");
-	  registerPage.inputToFirstNameTextbox(firstName);
+	 registerPage.inputToTextboxByID(driver, "FirstName", firstName);
+	 
 	  log.info("Register - Step 02: Enter to Lastname textbox with value is '"+ lastName + "'");
-	  registerPage.inputToLastNameTextbox(lastName);
+	  registerPage.inputToTextboxByID(driver, "LastName", lastName);
+	  
+	  registerPage.clickToRadioButtonByLabel(driver, "Male");
+	  
+	  registerPage.clickToCheckboxByLabel(driver, "Newsletter");
+	  
 	  log.info("Register - Step 02: Enter to Emailaddress textbox with value is '"+ emailAddress + "'");
-	  registerPage.inputToEmailTextbox(emailAddress);
+	  registerPage.inputToTextboxByID(driver, "Email", emailAddress);
+	  
+	  log.info("Register - Step 02.1: Enter birthday '"+ date + "'");
+	  registerPage.selectToDropdownByName(driver, "DateOfBirthDay", date);
+	  registerPage.selectToDropdownByName(driver, "DateOfBirthMonth", month);
+	  registerPage.selectToDropdownByName(driver, "DateOfBirthYear", year);
+	  
 	  log.info("Register - Step 02: Enter to Password textbox with value is '"+ password + "'");
-	  registerPage.inputToPasswordTextbox(password);
+	  registerPage.inputToTextboxByID(driver, "Password", password);
+	  
 	  log.info("Register - Step 02: Enter to Confirm Password textbox with value is '"+ password + "'");
-	  registerPage.inputToConfirmPasswordTextbox(password);
+	  registerPage.inputToTextboxByID(driver, "ConfirmPassword", password);
+	  
+	  registerPage.sleepInSecond(10);
 	  
 	  log.info("Register - Step 03: Click Register Button");
-	  registerPage.clickToRegisterButton();
+	  //registerPage.clickToRegisterButton();
+	  registerPage.clickToButtonByText(driver, "Register");
 
-	  driver = null;
-	  
 	  log.info("Register - Step 04: Verify success message displayed...");
-	  verifyEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed...");  
+	  Assert.assertEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed");  
 	  
 	  log.info("Register - Step 05: Click logout link");
 	  homePage = registerPage.clickToLogoutLink();  	  
-  
-	  log.info("Login - Step 06: Click Login link");
+  }
+ 
+ //@Test
+ public void User_02_Login_Page() {
+	 
+	 log.info("Login - Step 06: Click Login link");
 	  loginPage = homePage.clickToLoginLinkUser();
 	  
 	  log.info("Login - Step 07: Click Login link");
@@ -119,38 +100,18 @@ public class Level_17_Custom_Close_Driver extends BaseTestNopCommerce{
 	  loginPage.inputToPasswordTextbox(password);
 	  
 	  log.info("Login - Step 08: Click Login link");
-	  homePage = loginPage.clickToLoginButton();
+	  //homePage = loginPage.clickToLoginButton();
+	  
+	  // Vì hàm clickToButtonByText la ham dung chung nen ko khoi tao & gan homepage như bt dc
+	  loginPage.clickToButtonByText(driver, "Log in");
+	  homePage = PageGeneratorManager.getUserHomePage(driver); //dòng này dùng de chuyen page từ login wa homepage, để homepage chay tiep
 	  
 	  log.info("Login - Step 09: Verify My Account link display");
-	  verifyFalse(homePage.isMyAccountLinkDisplayed());
+	  Assert.assertTrue(homePage.isMyAccountLinkDisplayed());
 	       
 	  log.info("Login - Step 09: Verify Customer Info link display");
 	  customerInforPage = homePage.clickToMyAccountLink();    
-	  verifyFalse(customerInforPage.isCustomerInforPageDisplayed());
-  }
- 
- //@Test
- public void User_02_Switch_Page() {
-	 
-	 //Customer Infor > Address
-	 log.info("Customer Info - Step 01: Switch to Address page");
-	 addressPage = customerInforPage.openAddressPage(driver);
-	 log.info("Address - Step 02: Switch to My Product review page");
-	 //Address > My Product Review
-	 myProductReviewPage = addressPage.openMyProductReviewPage(driver);
-	 //My Product Review > Reward Point
-	 log.info("My Product Review - Step 03: Switch to Reward Point page");
-	 rewardPointPage = myProductReviewPage.openRewardPoint(driver);
-	 //Reward Point -> Address
-	 log.info("Reward Point - Step 04: Switch to Address page");
-	 addressPage = rewardPointPage.openAddressPage(driver);
-	 //Address -> Reward Point
-	 log.info("Address - Step 05: Switch to Reward Point page");
-	 rewardPointPage = addressPage.openRewardPoint(driver);
-	 //Reward Point > My Product Review
-	 log.info("Reward Point - Step 06: Switch to My Product review page");
-	 myProductReviewPage = rewardPointPage.openMyProductReviewPage(driver);
-	 
+	  Assert.assertFalse(customerInforPage.isCustomerInforPageDisplayed());	 
  }
   //@Test
   public void User_03_Dynamic_Page_01() {
@@ -188,13 +149,13 @@ public class Level_17_Custom_Close_Driver extends BaseTestNopCommerce{
 	 
 	 
 	}
-  
+ 
   @AfterClass(alwaysRun = true)
-	public void afterClass() {
-	  closeBrowserAndDriver();
-	}
+ 	public void afterClass() {
+ 	  closeBrowserAndDriver();
+ 	}
   
-    private WebDriver driver; 
+  private WebDriver driver; 
 	//private String projectPath = System.getProperty("user.dir");
 	private String emailAddress, firstName, lastName, password, myAccountLinkText;
 	private UserHomePageObject homePage; 
@@ -204,4 +165,5 @@ public class Level_17_Custom_Close_Driver extends BaseTestNopCommerce{
 	private UserAddressPageObject addressPage;
 	private UserMyProductReviewPageObject myProductReviewPage;
 	private UserRewardPointPageObject rewardPointPage;
+	private String date, month, year;
 }

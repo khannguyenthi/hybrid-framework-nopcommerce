@@ -90,4 +90,11 @@ public class UserRegisterPageObject extends BasePage {
 		return getElementText(driver,RegisterPageUI.EXISTING_EMAIL_ERROR_MESSAGE);
 	}
 
+
+	
+
+
+
+	
+
 }

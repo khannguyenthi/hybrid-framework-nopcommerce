@@ -598,6 +598,67 @@ public class BasePage {
 		clickToElement(driver, BasePageNopCommerceUI.DYNAMIC_PAGE_AT_MY_ACCOUNT_AREA, pageName);
 	}
 	
+	/** Enter to dynamic textbox by ID
+	 * @author Khan Nguyen
+	 * @param driver
+	 * @param textboxID
+	 * @param value
+	 */
+	public void inputToTextboxByID(WebDriver driver, String textboxID, String value) {
+		waitForElementVisible(driver, BasePageNopCommerceUI.DYNAMIC_TEXT_BOX_BY_ID, textboxID);
+		sendkeyToElement(driver, BasePageNopCommerceUI.DYNAMIC_TEXT_BOX_BY_ID, value, textboxID);
+	}
+	
+	
+	/** Enter to dynamic button by text
+	 * @author Khan Nguyen
+	 * @param driver
+	 * @param buttonText
+	 * @param value
+	 */
+	public void clickToButtonByText(WebDriver driver, String buttonText) {
+		waitForElementClickable(driver, BasePageNopCommerceUI.DYNAMIC_BUTTON_BY_TEXT, buttonText);
+		clickToElement(driver, BasePageNopCommerceUI.DYNAMIC_BUTTON_BY_TEXT, buttonText);
+	}
+	
+	/** Select item in dropdown by Name attribute
+	 * @author Khan Nguyen
+	 * @param driver
+	 * @param dropdownAttribute
+	 * @param value
+	 */
+	
+	public void selectToDropdownByName(WebDriver driver, String dropdownAttributeName, String itemValue) {
+		waitForElementClickable(driver, BasePageNopCommerceUI.DYNAMIC_DROPDOWN_BY_NAME, dropdownAttributeName);
+		selectItemInDefaultDropdown(driver, BasePageNopCommerceUI.DYNAMIC_DROPDOWN_BY_NAME, itemValue, dropdownAttributeName);
+		
+	}
+	
+	/** Click to dynamic radio button by label
+	 * @author Khan Nguyen
+	 * @param driver
+	 * @param radio button
+	 * @param value
+	 */
+	public void clickToRadioButtonByLabel(WebDriver driver, String radioButtonLabelName) {
+		waitForElementClickable(driver, BasePageNopCommerceUI.DYNAMIC_RADIO_BUTTON_BY_LABEL, radioButtonLabelName);
+		checkToDefaultCheckboxOrRadio(driver, BasePageNopCommerceUI.DYNAMIC_RADIO_BUTTON_BY_LABEL, radioButtonLabelName);
+	}
+	
+	
+	/** Click to dynamic checkbox by label
+	 * @author Khan Nguyen
+	 * @param driver
+	 * @param checkbox
+	 * @param value
+	 */
+	public void clickToCheckboxByLabel(WebDriver driver, String checkboxLabelName) {
+		waitForElementClickable(driver, BasePageNopCommerceUI.DYNAMIC_CHECKBOX_BY_LABEL, checkboxLabelName);
+		checkToDefaultCheckboxOrRadio(driver, BasePageNopCommerceUI.DYNAMIC_CHECKBOX_BY_LABEL, checkboxLabelName);
+
+	}
+
+	
 	//Level 8 Switch role
 	public AccountInformationPageObject openAccountInformationPage(WebDriver driver) {
 		waitForElementClickable(driver, BasePageUI_Live_Guru.ACCOUNT_INFORMATION_LINK);

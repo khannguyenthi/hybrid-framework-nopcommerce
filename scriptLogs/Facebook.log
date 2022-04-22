@@ -284,3 +284,127 @@
 [2022-04-21 05:22:42,850] Pre-condition: - Step 02: Set cookies and reload page
 [2022-04-21 05:22:47,285] Pre-condition: - Step 03: Verify My Account link display
 [2022-04-21 05:22:47,390] Login - Step 09: Verify My Account link display
+[2022-04-21 15:20:56,073] Register - Step 01: Navigate to 'Register page'
+[2022-04-21 15:20:57,565] Register - Step 02: Enter to Firstname textbox with value is 'Khan'
+[2022-04-21 15:20:57,652] Register - Step 02: Enter to Lastname textbox with value is 'Auto'
+[2022-04-21 15:20:57,757] Register - Step 02: Enter to Emailaddress textbox with value is 'khan1772@gmail.com'
+[2022-04-21 15:20:57,837] Register - Step 02: Enter to Password textbox with value is '123456'
+[2022-04-21 15:20:57,939] Register - Step 02: Enter to Confirm Password textbox with value is '123456'
+[2022-04-21 15:20:58,032] Register - Step 03: Click Register Button
+[2022-04-21 15:21:00,002] Register - Step 04: Verify success message displayed...
+[2022-04-21 15:21:00,053] Register - Step 05: Click logout link
+[2022-04-21 15:21:01,071] Login - Step 06: Click Login link
+[2022-04-21 15:21:01,787] Login - Step 07: Click Login link
+[2022-04-21 15:21:01,969] Login - Step 08: Click Login link
+[2022-04-21 15:21:03,093] Login - Step 09: Verify My Account link display
+[2022-04-21 15:21:03,181] Login - Step 09: Verify Customer Info link display
+[2022-04-21 15:27:51,789] Register - Step 01: Navigate to 'Register page'
+[2022-04-21 15:27:53,091] Register - Step 02: Enter to Firstname textbox with value is 'Khan'
+[2022-04-21 15:27:53,172] Register - Step 02: Enter to Lastname textbox with value is 'Auto'
+[2022-04-21 15:27:53,264] Register - Step 02: Enter to Emailaddress textbox with value is 'khan9158@gmail.com'
+[2022-04-21 15:27:53,359] Register - Step 02: Enter to Password textbox with value is '123456'
+[2022-04-21 15:27:53,442] Register - Step 02: Enter to Confirm Password textbox with value is '123456'
+[2022-04-21 15:27:53,521] Register - Step 03: Click Register Button
+[2022-04-21 15:27:54,698] Register - Step 04: Verify success message displayed...
+[2022-04-21 15:27:54,753] Register - Step 05: Click logout link
+[2022-04-21 15:27:56,009] Login - Step 06: Click Login link
+[2022-04-21 15:27:56,707] Login - Step 07: Click Login link
+[2022-04-21 15:27:56,877] Login - Step 08: Click Login link
+[2022-04-21 15:27:57,691] Login - Step 09: Verify My Account link display
+[2022-04-21 15:27:57,770] Login - Step 09: Verify Customer Info link display
+[2022-04-21 15:27:59,134] Register - Step 01: Navigate to 'Register page'
+[2022-04-21 20:43:01,169] Register - Step 01: Navigate to 'Register page'
+[2022-04-21 20:43:01,969] Register - Step 02: Enter to Firstname textbox with value is 'Khan'
+[2022-04-21 20:43:02,049] Register - Step 02: Enter to Lastname textbox with value is 'Auto'
+[2022-04-21 20:43:02,129] Register - Step 02: Enter to Emailaddress textbox with value is 'khan8606@gmail.com'
+[2022-04-21 20:43:02,227] Register - Step 02: Enter to Password textbox with value is '123456'
+[2022-04-21 20:43:02,313] Register - Step 02: Enter to Confirm Password textbox with value is '123456'
+[2022-04-21 20:43:02,402] Register - Step 03: Click Register Button
+[2022-04-21 20:43:03,352] Register - Step 04: Verify success message displayed...
+[2022-04-21 20:43:03,404] Register - Step 05: Click logout link
+[2022-04-21 20:43:04,367] Login - Step 06: Click Login link
+[2022-04-21 20:43:05,307] Login - Step 07: Click Login link
+[2022-04-21 20:43:05,502] Login - Step 08: Click Login link
+[2022-04-21 20:43:06,431] Login - Step 09: Verify My Account link display
+[2022-04-21 20:43:06,497] Login - Step 09: Verify Customer Info link display
+[2022-04-21 20:43:07,294] Register - Step 01: Navigate to 'Register page'
+[2022-04-21 21:06:27,119] Register - Step 01: Navigate to 'Register page'
+[2022-04-21 21:06:28,392] Register - Step 02: Enter to Firstname textbox with value is 'Khan'
+[2022-04-21 21:06:28,477] Register - Step 02: Enter to Lastname textbox with value is 'Auto'
+[2022-04-21 21:06:28,586] Register - Step 02: Enter to Emailaddress textbox with value is 'khan9804@gmail.com'
+[2022-04-21 21:06:28,699] Register - Step 02: Enter to Password textbox with value is '123456'
+[2022-04-21 21:06:28,832] Register - Step 02: Enter to Confirm Password textbox with value is '123456'
+[2022-04-21 21:06:28,937] Register - Step 03: Click Register Button
+[2022-04-21 21:06:29,924] Register - Step 04: Verify success message displayed...
+[2022-04-21 21:06:29,981] Register - Step 05: Click logout link
+[2022-04-21 21:06:30,766] Login - Step 06: Click Login link
+[2022-04-21 21:06:31,422] Login - Step 07: Click Login link
+[2022-04-21 21:06:31,618] Login - Step 08: Click Login link
+[2022-04-21 21:06:32,450] Login - Step 09: Verify My Account link display
+[2022-04-21 21:06:32,518] Login - Step 09: Verify Customer Info link display
+[2022-04-21 21:06:33,143] Register - Step 01: Navigate to 'Register page'
+[2022-04-21 21:07:13,740] OS name = windows 10
+[2022-04-21 21:07:13,740] Driver instance name = firefoxdriver: firefox on windows (59db3c5a-3a1e-4250-935a-f525b2fc738c)
+[2022-04-21 21:08:51,608] Register - Step 01: Navigate to 'Register page'
+[2022-04-21 21:08:52,401] Register - Step 02: Enter to Firstname textbox with value is 'Khan'
+[2022-04-21 21:08:52,531] Register - Step 02: Enter to Lastname textbox with value is 'Auto'
+[2022-04-21 21:08:52,634] Register - Step 02: Enter to Emailaddress textbox with value is 'khan5807@gmail.com'
+[2022-04-21 21:08:52,728] Register - Step 02: Enter to Password textbox with value is '123456'
+[2022-04-21 21:08:52,856] Register - Step 02: Enter to Confirm Password textbox with value is '123456'
+[2022-04-21 21:08:52,968] Register - Step 03: Click Register Button
+[2022-04-21 21:08:53,854] Register - Step 04: Verify success message displayed...
+[2022-04-21 21:08:53,926] Register - Step 05: Click logout link
+[2022-04-21 21:08:54,840] Login - Step 06: Click Login link
+[2022-04-21 21:08:55,387] Login - Step 07: Click Login link
+[2022-04-21 21:08:55,542] Login - Step 08: Click Login link
+[2022-04-21 21:08:56,441] Login - Step 09: Verify My Account link display
+[2022-04-21 21:08:56,532] Login - Step 09: Verify Customer Info link display
+[2022-04-21 21:08:57,177] Register - Step 01: Navigate to 'Register page'
+[2022-04-21 21:09:37,781] OS name = windows 10
+[2022-04-21 21:09:37,781] Driver instance name = firefoxdriver: firefox on windows (417ee112-a26d-4b29-bf2e-e5ffd46735f9)
+[2022-04-22 08:55:19,773] Register - Step 01: Navigate to 'Register page'
+[2022-04-22 08:55:20,455] Register - Step 02: Enter to Firstname textbox with value is 'Khan'
+[2022-04-22 08:55:20,552] Register - Step 02: Enter to Lastname textbox with value is 'Auto'
+[2022-04-22 08:55:20,626] Register - Step 02: Enter to Emailaddress textbox with value is 'khan5554@gmail.com'
+[2022-04-22 08:55:20,714] Register - Step 02: Enter to Password textbox with value is '123456'
+[2022-04-22 08:55:20,810] Register - Step 02: Enter to Confirm Password textbox with value is '123456'
+[2022-04-22 08:55:20,889] Register - Step 03: Click Register Button
+[2022-04-22 08:56:02,410] OS name = windows 10
+[2022-04-22 08:56:02,410] Driver instance name = firefoxdriver: firefox on windows (7b55665a-230c-499e-89db-c878c14d6c60)
+[2022-04-22 08:56:39,469] Register - Step 01: Navigate to 'Register page'
+[2022-04-22 08:56:40,246] Register - Step 02: Enter to Firstname textbox with value is 'Khan'
+[2022-04-22 08:56:40,363] Register - Step 02: Enter to Lastname textbox with value is 'Auto'
+[2022-04-22 08:56:40,454] Register - Step 02: Enter to Emailaddress textbox with value is 'khan7337@gmail.com'
+[2022-04-22 08:56:40,588] Register - Step 02: Enter to Password textbox with value is '123456'
+[2022-04-22 08:56:40,691] Register - Step 02: Enter to Confirm Password textbox with value is '123456'
+[2022-04-22 08:56:40,775] Register - Step 03: Click Register Button
+[2022-04-22 08:56:41,759] Register - Step 04: Verify success message displayed...
+[2022-04-22 08:56:41,824] Register - Step 05: Click logout link
+[2022-04-22 08:56:42,608] OS name = windows 10
+[2022-04-22 08:56:42,608] Driver instance name = firefoxdriver: firefox on windows (c8f85547-cfaa-4508-81a0-9185a4458a1c)
+[2022-04-22 22:07:03,024] Register - Step 01: Navigate to 'Register page'
+[2022-04-22 22:07:04,160] Register - Step 02: Enter to Firstname textbox with value is 'Khan'
+[2022-04-22 22:07:04,242] Register - Step 02: Enter to Lastname textbox with value is 'Auto'
+[2022-04-22 22:07:04,670] Register - Step 02: Enter to Emailaddress textbox with value is 'khan8695@gmail.com'
+[2022-04-22 22:07:04,757] Register - Step 02.1: Enter birthday '10'
+[2022-04-22 22:07:24,925] OS name = windows 10
+[2022-04-22 22:07:24,925] Driver instance name = firefoxdriver: firefox on windows (1baee3a8-78b6-4cf4-949b-1f416fbb2024)
+[2022-04-22 22:09:43,083] Register - Step 01: Navigate to 'Register page'
+[2022-04-22 22:09:43,810] Register - Step 02: Enter to Firstname textbox with value is 'Khan'
+[2022-04-22 22:09:43,911] Register - Step 02: Enter to Lastname textbox with value is 'Auto'
+[2022-04-22 22:09:44,346] Register - Step 02: Enter to Emailaddress textbox with value is 'khan1853@gmail.com'
+[2022-04-22 22:09:44,438] Register - Step 02.1: Enter birthday '2'
+[2022-04-22 22:10:04,615] OS name = windows 10
+[2022-04-22 22:10:04,615] Driver instance name = firefoxdriver: firefox on windows (7b344054-b004-44a1-8db6-ca082f3c3a7e)
+[2022-04-22 22:13:33,220] Register - Step 01: Navigate to 'Register page'
+[2022-04-22 22:13:33,990] Register - Step 02: Enter to Firstname textbox with value is 'Khan'
+[2022-04-22 22:13:34,084] Register - Step 02: Enter to Lastname textbox with value is 'Auto'
+[2022-04-22 22:13:34,538] Register - Step 02: Enter to Emailaddress textbox with value is 'khan8401@gmail.com'
+[2022-04-22 22:13:34,630] Register - Step 02.1: Enter birthday '2'
+[2022-04-22 22:13:35,614] Register - Step 02: Enter to Password textbox with value is '123456'
+[2022-04-22 22:13:35,698] Register - Step 02: Enter to Confirm Password textbox with value is '123456'
+[2022-04-22 22:13:45,789] Register - Step 03: Click Register Button
+[2022-04-22 22:13:46,803] Register - Step 04: Verify success message displayed...
+[2022-04-22 22:13:46,859] Register - Step 05: Click logout link
+[2022-04-22 22:13:47,607] OS name = windows 10
+[2022-04-22 22:13:47,607] Driver instance name = firefoxdriver: firefox on windows (c77ee260-1032-45de-bc52-1720385ba5fc)
