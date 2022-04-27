@@ -1,12 +1,19 @@
-[2022-04-22 22:13:33,220] Register - Step 01: Navigate to 'Register page'
-[2022-04-22 22:13:33,990] Register - Step 02: Enter to Firstname textbox with value is 'Khan'
-[2022-04-22 22:13:34,084] Register - Step 02: Enter to Lastname textbox with value is 'Auto'
-[2022-04-22 22:13:34,538] Register - Step 02: Enter to Emailaddress textbox with value is 'khan8401@gmail.com'
-[2022-04-22 22:13:34,630] Register - Step 02.1: Enter birthday '2'
-[2022-04-22 22:13:35,614] Register - Step 02: Enter to Password textbox with value is '123456'
-[2022-04-22 22:13:35,698] Register - Step 02: Enter to Confirm Password textbox with value is '123456'
-[2022-04-22 22:13:45,789] Register - Step 03: Click Register Button
-[2022-04-22 22:13:46,803] Register - Step 04: Verify success message displayed...
-[2022-04-22 22:13:46,859] Register - Step 05: Click logout link
-[2022-04-22 22:13:47,607] OS name = windows 10
-[2022-04-22 22:13:47,607] Driver instance name = firefoxdriver: firefox on windows (c77ee260-1032-45de-bc52-1720385ba5fc)
+[2022-04-23 05:38:18,373] Register - Step 01: Navigate to 'Register page'
+[2022-04-23 05:38:18,970] Register - Step 02: Enter to Firstname textbox with value is 'Khan'
+[2022-04-23 05:38:19,094] Register - Step 02: Enter to Lastname textbox with value is 'Auto'
+[2022-04-23 05:38:19,614] Register - Step 02: Enter to Emailaddress textbox with value is 'khan8@gmail.com'
+[2022-04-23 05:38:19,699] Register - Step 02.1: Enter birthday '2'
+[2022-04-23 05:38:20,694] Register - Step 02: Enter to Password textbox with value is '123456'
+[2022-04-23 05:38:20,778] Register - Step 02: Enter to Confirm Password textbox with value is '123456'
+[2022-04-23 05:38:20,873] Register - Step 03: Click Register Button
+[2022-04-23 05:38:21,890] Register - Step 04: Verify success message displayed...
+[2022-04-23 05:38:21,941] Register - Step 05: Click logout link
+[2022-04-23 05:38:22,715] Login - Step 06: Click Login link
+[2022-04-23 05:38:24,908] Login - Step 07: Click Login link
+[2022-04-23 05:38:25,073] Login - Step 08: Click Login link
+[2022-04-23 05:38:25,838] Login - Step 09: Verify My Account link display
+[2022-04-23 05:38:25,928] My Account - Step 01: Verify Customer Info link display
+[2022-04-23 05:38:28,057] My Account - Step 02: Verify Customer Info link display
+[2022-04-23 05:38:28,121] My Account - Step 03: Verify firstName value is correctly
+[2022-04-23 05:38:28,177] My Account - Step 04: Verify lastName value is correctly
+[2022-04-23 05:38:28,242] My Account - Step 05: Verify emailAddress value is correctly

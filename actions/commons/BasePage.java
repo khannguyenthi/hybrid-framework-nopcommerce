@@ -275,6 +275,10 @@ public class BasePage {
 		return getWebElement(driver, locatorType).getAttribute(attributeName);
 	}
 	
+	public String getElementAttribute (WebDriver driver, String locatorType, String attributeName, String... dynamicValues) {
+		return getWebElement(driver,  getDynamicXpath(locatorType, dynamicValues)).getAttribute(attributeName);
+	}
+	
 	public String getElementCssValue(WebDriver driver, String locatorType, String propertyName) {
 		return getWebElement(driver, locatorType).getCssValue(propertyName);
 	} 
@@ -657,6 +661,18 @@ public class BasePage {
 		checkToDefaultCheckboxOrRadio(driver, BasePageNopCommerceUI.DYNAMIC_CHECKBOX_BY_LABEL, checkboxLabelName);
 
 	}
+	
+	/** Get value in textbox by textbox ID
+	 * @param driver
+	 * @param textboxID
+	 * @return
+	 */
+	public String getTextboxValueByID(WebDriver driver, String textboxID) {
+		waitForElementVisible(driver, BasePageNopCommerceUI.DYNAMIC_TEXT_BOX_BY_ID,textboxID);
+		//ten cua attribute inpect as value
+		return getElementAttribute(driver, BasePageNopCommerceUI.DYNAMIC_TEXT_BOX_BY_ID, "value", textboxID);
+	}
+
 
 	
 	//Level 8 Switch role

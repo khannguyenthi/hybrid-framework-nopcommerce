@@ -76,8 +76,6 @@ public class Level_18_Pattern_Object extends BaseTest{
 	  log.info("Register - Step 02: Enter to Confirm Password textbox with value is '"+ password + "'");
 	  registerPage.inputToTextboxByID(driver, "ConfirmPassword", password);
 	  
-	  registerPage.sleepInSecond(10);
-	  
 	  log.info("Register - Step 03: Click Register Button");
 	  //registerPage.clickToRegisterButton();
 	  registerPage.clickToButtonByText(driver, "Register");
@@ -87,12 +85,8 @@ public class Level_18_Pattern_Object extends BaseTest{
 	  
 	  log.info("Register - Step 05: Click logout link");
 	  homePage = registerPage.clickToLogoutLink();  	  
-  }
- 
- //@Test
- public void User_02_Login_Page() {
-	 
-	 log.info("Login - Step 06: Click Login link");
+  
+	  log.info("Login - Step 06: Click Login link");
 	  loginPage = homePage.clickToLoginLinkUser();
 	  
 	  log.info("Login - Step 07: Click Login link");
@@ -100,60 +94,40 @@ public class Level_18_Pattern_Object extends BaseTest{
 	  loginPage.inputToPasswordTextbox(password);
 	  
 	  log.info("Login - Step 08: Click Login link");
-	  //homePage = loginPage.clickToLoginButton();
-	  
-	  // Vì hàm clickToButtonByText la ham dung chung nen ko khoi tao & gan homepage như bt dc
-	  loginPage.clickToButtonByText(driver, "Log in");
-	  homePage = PageGeneratorManager.getUserHomePage(driver); //dòng này dùng de chuyen page từ login wa homepage, để homepage chay tiep
+	  homePage = loginPage.clickToLoginButton();
 	  
 	  log.info("Login - Step 09: Verify My Account link display");
-	  Assert.assertTrue(homePage.isMyAccountLinkDisplayed());
-	       
-	  log.info("Login - Step 09: Verify Customer Info link display");
-	  customerInforPage = homePage.clickToMyAccountLink();    
-	  Assert.assertFalse(customerInforPage.isCustomerInforPageDisplayed());	 
- }
-  //@Test
-  public void User_03_Dynamic_Page_01() {
-	  
-	  //My Product Review > Reward Point
-	  rewardPointPage = (UserRewardPointPageObject) myProductReviewPage.openPagesAtMyAccountByName(driver, "Reward points");
-	  //Reward Point -> Address
-	  addressPage = (UserAddressPageObject) rewardPointPage.openPagesAtMyAccountByName(driver, "Addresses");
-	  //Address -> Reward Point
-	  rewardPointPage = (UserRewardPointPageObject) addressPage.openPagesAtMyAccountByName(driver, "Reward points");
-	  //Reward Point > My Product Review
-	  myProductReviewPage = (UserMyProductReviewPageObject) rewardPointPage.openPagesAtMyAccountByName(driver, "My product reviews");
+	  verifyTrue(homePage.isMyAccountLinkDisplayed());     
 	 
-	  //My Product Review > Customer Info
-	  customerInforPage = (UserCustomerInfoPageObject) myProductReviewPage.openAddressPage(driver).openPagesAtMyAccountByName(driver, "Customer info");
+  }
+ 
+ 
+  @Test
+  public void User_02_My_Account() {
+	  log.info("My Account - Step 01: Verify Customer Info link display");
+	  customerInforPage = homePage.clickToMyAccountLink(); 
+	  
+	  log.info("My Account - Step 02: Verify Customer Info link display");
+	  verifyTrue(customerInforPage.isCustomerInforPageDisplayed());
+	  
+	  log.info("My Account - Step 03: Verify firstName value is correctly");
+	  //FirstName la gia tri cua ID inspect, firstName la gia tri o buoc dki
+	  Assert.assertEquals(customerInforPage.getTextboxValueByID(driver,"FirstName"),firstName); 
+	  
+	  log.info("My Account - Step 04: Verify lastName value is correctly");
+	  Assert.assertEquals(customerInforPage.getTextboxValueByID(driver,"LastName"),lastName); 
+	  	
+	  log.info("My Account - Step 05: Verify emailAddress value is correctly");
+	  Assert.assertEquals(customerInforPage.getTextboxValueByID(driver,"Email"),emailAddress); 
+	 
 	  
   }
- //@Test
-  public void User_04_Dynamic_Page_02() {
-	  //Customer Info -> My Product Review
-	 customerInforPage.openPagesAtMyAccountByName(driver, "My product reviews");
-	 myProductReviewPage = PageGeneratorManager.getUserMyProductReviewPage(driver);
-	 
-	 //My Product Review -> Reward Point
-	 myProductReviewPage.openPagesAtMyAccountByName(driver, "Reward points");
-	 rewardPointPage = PageGeneratorManager.getUserRewardPointPage(driver);
-	 
-	 //Reward Point -> Address
-	 rewardPointPage.openPagesAtMyAccountByName(driver, "Addresses");
-	 addressPage = PageGeneratorManager.getUserAddressPage(driver);
-	 
-	 //Address -> Reward Point
-	 addressPage.openPagesAtMyAccountByName(driver, "Reward points");
-	 rewardPointPage = PageGeneratorManager.getUserRewardPointPage(driver);
-	 
-	 
-	}
  
-  @AfterClass(alwaysRun = true)
- 	public void afterClass() {
- 	  closeBrowserAndDriver();
- 	}
+ 
+  //@AfterClass(alwaysRun = true)
+ 	//public void afterClass() {
+ 	  //closeBrowserAndDriver();
+ 	//}
   
   private WebDriver driver; 
 	//private String projectPath = System.getProperty("user.dir");
