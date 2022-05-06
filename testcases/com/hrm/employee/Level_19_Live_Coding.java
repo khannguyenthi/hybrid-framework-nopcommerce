@@ -43,10 +43,18 @@ public class Level_19_Live_Coding extends BaseTest{
  @Test
   public void Employee_01_Add_New_Employee() {
 	 log.info("Add_New_01 - Step 01: Open 'Employee List' Page");
-	 employeeListPage = dashboardPage.openEmployeeListPage();
+	 //employeeListPage = dashboardPage.openEmployeeListPage();
+	 dashboardPage.openSubMenuPage(driver, "PIM", "Employee List"); 
+	 //Do return void nen phai gan lai page & khoi tao trang Employee List
+	 //Khoi tao page tu pageGeneratorManager
+	 employeeListPage = pageGenerator.getEmployeeListPage(driver);
+	 
 	 
 	 log.info("Add_New_01 - Step 02: Click to 'Add' button");
-	 addEmployeePage = employeeListPage.clickToAddButton();
+	 //addEmployeePage = employeeListPage.clickToAddButton();
+	 employeeListPage.clickToButtonById(driver, "btnAdd");
+	 addEmployeePage = pageGenerator.getAddEmployeePage(driver); //Khoi tao trang Add Employee Page
+	 
 	 
 	 log.info("Add_New_01 - Step 03: Enter valid info to 'First Name' textbox");
 	 addEmployeePage.enterToFirstNameTextbox("");
@@ -55,7 +63,7 @@ public class Level_19_Live_Coding extends BaseTest{
 	 addEmployeePage.enterToLastNameTextbox("");
 
 	 log.info("Add_New_01 - Step 05: Get value of 'Employee ID'");
-	 addEmployeePage.getEmployeeID();
+	 employeeID = addEmployeePage.getEmployeeID();
 
 	 log.info("Add_New_01 - Step 06: Click to 'Create Login Details' checkbox");
 	 addEmployeePage.clickToCreateLoginDetailCheckbox("");
@@ -73,17 +81,23 @@ public class Level_19_Live_Coding extends BaseTest{
 	 addEmployeePage.selectValueInStatusDropdown(statusValue);
 	 
 	 log.info("Add_New_01 - Step 11: Click to 'Save' button");
-	 personalDetailPage = addEmployeePage.clickToSaveButton();
+	 //personalDetailPage = addEmployeePage.clickToSaveButton();
+	 addEmployeePage.clickToButtonById(driver, "btnSave");
+	 personalDetailPage = pageGenerator.getPersonalDetailPage(driver);
 	 
 	 
 	 log.info("Add_New_01 - Step 12: Open 'Employee List' Page after create employee successfully");
-	 employeeListPage = personalDetailPage.openEmployeeListPage();
+	 //employeeListPage = personalDetailPage.openEmployeeListPage();
+	 
+	 personalDetailPage.openSubMenuPage(driver, "PIM", "Employee List");
+	 employeeListPage = pageGenerator.getEmployeeListPage(driver);
 	 
 	 log.info("Add_New_01 - Step 13: Enter valid info to 'Employee Name' textbox");
 	 employeeListPage.enterToEmployeeNameTextbox("");
 	 
 	 log.info("Add_New_01 - Step 14: Click to 'Search' button");
-	 employeeListPage.clickToSearchButton();
+	 //employeeListPage.clickToSearchButton();
+	 employeeListPage.clickToButtonById(driver, "searchBtn");
 	 
 	 log.info("Add_New_01 - Step 15: Verify Employee Information displayed at 'Result Table'");
 	 verifyTrue(employeeListPage.isEmployeeInfoDisplayedAtTable("","",""));

@@ -30,6 +30,7 @@ import pageObjects.liveGuru.BilingAgreementPageObject;
 import pageObjects.liveGuru.MyOrdersPageObject;
 import pageObjects.liveGuru.PageGeneratorManager_Live_Guru;
 import pageObjects.liveGuru.RecurringProfilesPageObject;
+import pageUIs.hrm.BasePageUI;
 import pageUIs.jQuery.uploadFile.BasePageJQueryUI;
 import pageUIs.liveGuru.BasePageUI_Live_Guru;
 import pageUIs.nopCommerce.user.BasePageNopCommerceUI;
@@ -391,6 +392,11 @@ public class BasePage {
 		action.moveToElement(getWebElement(driver, locatorType)).perform();
 	}
 	
+	public void hoverMouseToElement(WebDriver driver, String locatorType, String... dynamicValues) {
+		Actions action = new Actions(driver);
+		action.moveToElement(getWebElement(driver, getDynamicXpath(locatorType, dynamicValues))).perform();
+	}
+	
 	public void pressKeyToElement(WebDriver driver, String locatorType, Keys key) {
 		Actions action = new Actions(driver);
 		action.sendKeys(getWebElement(driver, locatorType), key).perform();
@@ -509,7 +515,7 @@ public class BasePage {
 		explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByLocator(locatorType)));
 	}
 	/* 
-	 * Wait for element undisplayd in DOM or not in DOM and override implicit timeout
+	 * Wait for element un-displayed in DOM or not in DOM and override implicit timeout
 	 * */
 	public void waitForElementUndisplayed(WebDriver driver, String locatorType) {
 		WebDriverWait explicitWait = new WebDriverWait(driver, shortTimeout);
@@ -555,7 +561,7 @@ public class BasePage {
 		getWebElement(driver, BasePageJQueryUI.UPLOAD_FILE_TYPE).sendKeys(fullFileName);
 	}
 	
-	//Toi uu o lessio Level 07 Switch Page
+	//Toi uu o lession Level 07 Switch Page
 	public UserAddressPageObject openAddressPage(WebDriver driver) {
 		waitForElementClickable(driver, BasePageNopCommerceUI.ADDRESS_LINK);
 		clickToElement(driver, BasePageNopCommerceUI.ADDRESS_LINK);
@@ -704,6 +710,39 @@ public class BasePage {
 		clickToElement(driver, BasePageUI_Live_Guru.RECURRING_PROFILE_LINK);
 		return PageGeneratorManager_Live_Guru.getRecurringProfilesPage(driver);
 	}
+	
+	//HRM - Menu/ SubMenu/ ChildSubMenu 
+	public void openMenuPage(WebDriver driver, String menuPageName) {
+		waitForElementClickable(driver, BasePageUI.MENU_BY_PAGE_NAME, menuPageName);
+		clickToElement(driver, BasePageUI.MENU_BY_PAGE_NAME, menuPageName);
+	}
+	
+	public void openSubMenuPage(WebDriver driver, String menuPageName, String subMenuPageName) {
+		waitForElementClickable(driver, BasePageUI.MENU_BY_PAGE_NAME, menuPageName);
+		clickToElement(driver, BasePageUI.MENU_BY_PAGE_NAME, menuPageName);
+		
+		waitForElementClickable(driver, BasePageUI.MENU_BY_PAGE_NAME, subMenuPageName);
+		clickToElement(driver, BasePageUI.MENU_BY_PAGE_NAME, subMenuPageName);
+	}
+	
+	public void openchildSubMenuPage(WebDriver driver, String menuPageName, String subMenuPageName, String childSubMenuPageName) {
+		waitForElementClickable(driver, BasePageUI.MENU_BY_PAGE_NAME, menuPageName);
+		clickToElement(driver, BasePageUI.MENU_BY_PAGE_NAME, menuPageName);
+		
+		//For childSubMenu must hover on subMenu instead of clicking on it
+		waitForElementVisible(driver, BasePageUI.MENU_BY_PAGE_NAME, subMenuPageName);
+		hoverMouseToElement(driver, BasePageUI.MENU_BY_PAGE_NAME, subMenuPageName);
+		
+		waitForElementClickable(driver, BasePageUI.MENU_BY_PAGE_NAME, childSubMenuPageName);
+		clickToElement(driver, BasePageUI.MENU_BY_PAGE_NAME, childSubMenuPageName);	
+	}
+	
+	//HRM click to Button dynamic
+	public void clickToButtonById(WebDriver driver, String buttonIDName) {
+		waitForElementClickable(driver, BasePageUI.BUTTON_BY_ID, buttonIDName);
+		clickToElement(driver, BasePageUI.BUTTON_BY_ID, buttonIDName);
+	}
+	
 		
 	private long longTimeout = GlobalConstants.LONG_TIMEOUT;
 	private long shortTimeout = GlobalConstants.SHORT_TIMEOUT;
