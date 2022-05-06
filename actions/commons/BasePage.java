@@ -743,6 +743,14 @@ public class BasePage {
 		clickToElement(driver, BasePageUI.BUTTON_BY_ID, buttonIDName);
 	}
 	
+	//Textbox dynamic
+	public void enterToTextboxByID(WebDriver driver, String textboxIDName, String value) {
+		waitForElementVisible(driver, BasePageUI.TEXTBOX_BY_ID, textboxIDName);
+		sendkeyToElement(driver, BasePageUI.TEXTBOX_BY_ID, value,textboxIDName);
+		
+		
+	}
+	
 		
 	private long longTimeout = GlobalConstants.LONG_TIMEOUT;
 	private long shortTimeout = GlobalConstants.SHORT_TIMEOUT;

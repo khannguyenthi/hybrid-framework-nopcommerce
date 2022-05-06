@@ -11,16 +11,6 @@ public class EmployeeListPO extends BasePage{
 		this.driver = driver;
 	}
 
-	
-	public void enterToEmployeeNameTextbox(String string) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void clickToSearchButton() {
-		// TODO Auto-generated method stub
-		
-	}
 
 	public boolean isEmployeeInfoDisplayedAtTable(String string, String string2, String string3) {
 		// TODO Auto-generated method stub

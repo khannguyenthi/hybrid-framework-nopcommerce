@@ -36,7 +36,11 @@ public class Level_19_Live_Coding extends BaseTest{
 		 statusValue = "Enabled";
 		 
 		 log.info("Pre-condition - Step 02: Login with admin role");
-		 dashboardPage = loginPage.loginToSystem("Admin","admin123");
+		 loginPage.enterToTextboxByID(driver, "txtUsername", "Admin");
+		 loginPage.enterToTextboxByID(driver, "txtPassword", "admin123");
+		 loginPage.clickToButtonById(driver, "btnLogin");
+		 dashboardPage = pageGenerator.getDashboardPage(driver);
+		 
 		 
 	 }
 
@@ -57,10 +61,11 @@ public class Level_19_Live_Coding extends BaseTest{
 	 
 	 
 	 log.info("Add_New_01 - Step 03: Enter valid info to 'First Name' textbox");
-	 addEmployeePage.enterToFirstNameTextbox("");
+	 addEmployeePage.enterToTextboxByID(driver, "firstName", "");
+	 
 	 
 	 log.info("Add_New_01 - Step 04: Enter valid info to 'Last Name' textbox");
-	 addEmployeePage.enterToLastNameTextbox("");
+	 addEmployeePage.enterToTextboxByID(driver, "lastName", "");
 
 	 log.info("Add_New_01 - Step 05: Get value of 'Employee ID'");
 	 employeeID = addEmployeePage.getEmployeeID();
@@ -69,13 +74,13 @@ public class Level_19_Live_Coding extends BaseTest{
 	 addEmployeePage.clickToCreateLoginDetailCheckbox("");
 
 	 log.info("Add_New_01 - Step 07: Enter valid info to 'User Name' textbox");
-	 addEmployeePage.enterToUserNameTextbox("");
+	 addEmployeePage.enterToTextboxByID(driver, "user_name", "");
 	 
 	 log.info("Add_New_01 - Step 08: Enter valid info to 'Password' textbox");
-	 addEmployeePage.enterToPasswordTextbox("");
+	 addEmployeePage.enterToTextboxByID(driver, "user_password", "");
 	 
 	 log.info("Add_New_01 - Step 09: Enter valid info to 'Confirm Password' textbox");
-	 addEmployeePage.enterToConfirmPasswordTextbox("");
+	 addEmployeePage.enterToTextboxByID(driver, "re_password", "");
 	 
 	 log.info("Add_New_01 - Step 10: Select '" + statusValue + "' value in 'Status' dropdown");
 	 addEmployeePage.selectValueInStatusDropdown(statusValue);
@@ -93,7 +98,7 @@ public class Level_19_Live_Coding extends BaseTest{
 	 employeeListPage = pageGenerator.getEmployeeListPage(driver);
 	 
 	 log.info("Add_New_01 - Step 13: Enter valid info to 'Employee Name' textbox");
-	 employeeListPage.enterToEmployeeNameTextbox("");
+	 employeeListPage.enterToTextboxByID(driver, "empsearch_employee_name_empName", "");
 	 
 	 log.info("Add_New_01 - Step 14: Click to 'Search' button");
 	 //employeeListPage.clickToSearchButton();

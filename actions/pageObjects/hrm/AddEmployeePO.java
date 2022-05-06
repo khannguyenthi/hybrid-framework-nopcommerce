@@ -11,15 +11,6 @@ public class AddEmployeePO extends BasePage{
 		this.driver = driver;
 	}
 
-	public void enterToFirstNameTextbox(String string) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void enterToLastNameTextbox(String string) {
-		// TODO Auto-generated method stub
-		
-	}
 
 	public String getEmployeeID() {
 		// TODO Auto-generated method stub
@@ -31,32 +22,10 @@ public class AddEmployeePO extends BasePage{
 		
 	}
 
-	public void enterToUserNameTextbox(String string) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void enterToPasswordTextbox(String string) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void enterToConfirmPasswordTextbox(String string) {
-		// TODO Auto-generated method stub
-		
-	}
 
 	public void selectValueInStatusDropdown(String statusValue) {
 		// TODO Auto-generated method stub
 		
 	}
-
-	public PersonalDetailPO clickToSaveButton() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	
-	
 
 }
