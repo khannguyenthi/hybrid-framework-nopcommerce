@@ -26,7 +26,7 @@ import org.testng.annotations.AfterClass;
 public class Level_19_Live_Coding extends BaseTest{
 	String employeeID, statusValue;
 	
-	 @Parameters({"browser","url"})
+	 @Parameters({ "browser", "url" })
 	 @BeforeClass 
 	  public void beforeClass(String browserName, String appUrl) {
 		 log.info("Pre-condition - Step 01: Open browser '" + browserName + "' and navigate to '" + appUrl + "'");
@@ -61,29 +61,30 @@ public class Level_19_Live_Coding extends BaseTest{
 	 
 	 
 	 log.info("Add_New_01 - Step 03: Enter valid info to 'First Name' textbox");
-	 addEmployeePage.enterToTextboxByID(driver, "firstName", "");
+	 addEmployeePage.enterToTextboxByID(driver, "firstName", "Automation 02");
 	 
 	 
 	 log.info("Add_New_01 - Step 04: Enter valid info to 'Last Name' textbox");
-	 addEmployeePage.enterToTextboxByID(driver, "lastName", "");
+	 addEmployeePage.enterToTextboxByID(driver, "lastName", "FC");
 
 	 log.info("Add_New_01 - Step 05: Get value of 'Employee ID'");
-	 employeeID = addEmployeePage.getEmployeeID();
+	 //employeeID = addEmployeePage.getEmployeeID();
+	 employeeID = addEmployeePage.getTextboxValueByID(driver, "employeeId");
 
 	 log.info("Add_New_01 - Step 06: Click to 'Create Login Details' checkbox");
-	 addEmployeePage.clickToCreateLoginDetailCheckbox("");
+	 addEmployeePage.clickToCheckboxByLabel(driver, "Create Login Details");
 
 	 log.info("Add_New_01 - Step 07: Enter valid info to 'User Name' textbox");
-	 addEmployeePage.enterToTextboxByID(driver, "user_name", "");
+	 addEmployeePage.enterToTextboxByID(driver, "user_name", "automation02");
 	 
 	 log.info("Add_New_01 - Step 08: Enter valid info to 'Password' textbox");
-	 addEmployeePage.enterToTextboxByID(driver, "user_password", "");
+	 addEmployeePage.enterToTextboxByID(driver, "user_password", "automation02");
 	 
 	 log.info("Add_New_01 - Step 09: Enter valid info to 'Confirm Password' textbox");
-	 addEmployeePage.enterToTextboxByID(driver, "re_password", "");
+	 addEmployeePage.enterToTextboxByID(driver, "re_password", "automation02");
 	 
 	 log.info("Add_New_01 - Step 10: Select '" + statusValue + "' value in 'Status' dropdown");
-	 addEmployeePage.selectValueInStatusDropdown(statusValue);
+	 addEmployeePage.selectItemInDropdownByID(driver, "status", statusValue);
 	 
 	 log.info("Add_New_01 - Step 11: Click to 'Save' button");
 	 //personalDetailPage = addEmployeePage.clickToSaveButton();
@@ -96,17 +97,21 @@ public class Level_19_Live_Coding extends BaseTest{
 	 
 	 personalDetailPage.openSubMenuPage(driver, "PIM", "Employee List");
 	 employeeListPage = pageGenerator.getEmployeeListPage(driver);
+	 employeeListPage.sleepInSecond(5);
 	 
 	 log.info("Add_New_01 - Step 13: Enter valid info to 'Employee Name' textbox");
-	 employeeListPage.enterToTextboxByID(driver, "empsearch_employee_name_empName", "");
+	 employeeListPage.enterToTextboxByID(driver, "empsearch_employee_name_empName", "automation02");
+	 employeeListPage.sleepInSecond(5);
 	 
 	 log.info("Add_New_01 - Step 14: Click to 'Search' button");
 	 //employeeListPage.clickToSearchButton();
 	 employeeListPage.clickToButtonById(driver, "searchBtn");
+	 employeeListPage.sleepInSecond(5);
 	 
 	 log.info("Add_New_01 - Step 15: Verify Employee Information displayed at 'Result Table'");
-	 verifyTrue(employeeListPage.isEmployeeInfoDisplayedAtTable("","",""));
-	 
+	 verifyEquals(employeeListPage.getValueInTableIDAtRowNumberAndColumnNumber(driver, "resultTable","Id","1"), employeeID);
+	 verifyEquals(employeeListPage.getValueInTableIDAtRowNumberAndColumnNumber(driver, "resultTable","First (& Middle) Name","1"), "automation02");
+	 verifyEquals(employeeListPage.getValueInTableIDAtRowNumberAndColumnNumber(driver, "resultTable","Last Name","1"), "FC");
   }
  
  
