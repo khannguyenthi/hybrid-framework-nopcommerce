@@ -24,7 +24,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
 public class Level_19_Live_Coding extends BaseTest{
-	String employeeID, statusValue;
+	String employeeID, statusValue, lastName;
 	
 	 @Parameters({ "browser", "url" })
 	 @BeforeClass 
@@ -32,8 +32,11 @@ public class Level_19_Live_Coding extends BaseTest{
 		 log.info("Pre-condition - Step 01: Open browser '" + browserName + "' and navigate to '" + appUrl + "'");
 		 driver = getBrowserDriver(browserName, appUrl);	 
 		 loginPage = pageGenerator.getLoginPage(driver);
+		 driver.manage().window().maximize();
+		 
 		 
 		 statusValue = "Enabled";
+		 lastName = "FC";
 		 
 		 log.info("Pre-condition - Step 02: Login with admin role");
 		 loginPage.enterToTextboxByID(driver, "txtUsername", "Admin");
@@ -61,27 +64,29 @@ public class Level_19_Live_Coding extends BaseTest{
 	 
 	 
 	 log.info("Add_New_01 - Step 03: Enter valid info to 'First Name' textbox");
-	 addEmployeePage.enterToTextboxByID(driver, "firstName", "Automation 02");
+	 addEmployeePage.enterToTextboxByID(driver, "firstName", "Automation");
 	 
 	 
 	 log.info("Add_New_01 - Step 04: Enter valid info to 'Last Name' textbox");
-	 addEmployeePage.enterToTextboxByID(driver, "lastName", "FC");
+	 addEmployeePage.enterToTextboxByID(driver, "lastName", lastName);
 
 	 log.info("Add_New_01 - Step 05: Get value of 'Employee ID'");
 	 //employeeID = addEmployeePage.getEmployeeID();
 	 employeeID = addEmployeePage.getTextboxValueByID(driver, "employeeId");
-
+	 addEmployeePage.sleepInSecond(3);
+	 System.out.println(employeeID);
+	 
 	 log.info("Add_New_01 - Step 06: Click to 'Create Login Details' checkbox");
 	 addEmployeePage.clickToCheckboxByLabel(driver, "Create Login Details");
 
 	 log.info("Add_New_01 - Step 07: Enter valid info to 'User Name' textbox");
-	 addEmployeePage.enterToTextboxByID(driver, "user_name", "automation02");
+	 addEmployeePage.enterToTextboxByID(driver, "user_name", "automationfc");
 	 
 	 log.info("Add_New_01 - Step 08: Enter valid info to 'Password' textbox");
-	 addEmployeePage.enterToTextboxByID(driver, "user_password", "automation02");
+	 addEmployeePage.enterToTextboxByID(driver, "user_password", "automationfc");
 	 
 	 log.info("Add_New_01 - Step 09: Enter valid info to 'Confirm Password' textbox");
-	 addEmployeePage.enterToTextboxByID(driver, "re_password", "automation02");
+	 addEmployeePage.enterToTextboxByID(driver, "re_password", "automationfc");
 	 
 	 log.info("Add_New_01 - Step 10: Select '" + statusValue + "' value in 'Status' dropdown");
 	 addEmployeePage.selectItemInDropdownByID(driver, "status", statusValue);
@@ -97,22 +102,21 @@ public class Level_19_Live_Coding extends BaseTest{
 	 
 	 personalDetailPage.openSubMenuPage(driver, "PIM", "Employee List");
 	 employeeListPage = pageGenerator.getEmployeeListPage(driver);
-	 employeeListPage.sleepInSecond(5);
 	 
 	 log.info("Add_New_01 - Step 13: Enter valid info to 'Employee Name' textbox");
-	 employeeListPage.enterToTextboxByID(driver, "empsearch_employee_name_empName", "automation02");
-	 employeeListPage.sleepInSecond(5);
+	 verifyTrue(employeeListPage.isJQueryAjaxLoadedSuccess(driver));
+	 employeeListPage.enterToTextboxByID(driver, "empsearch_employee_name_empName", "Automation FC");
+	 verifyTrue(employeeListPage.isJQueryAjaxLoadedSuccess(driver));
 	 
 	 log.info("Add_New_01 - Step 14: Click to 'Search' button");
 	 //employeeListPage.clickToSearchButton();
 	 employeeListPage.clickToButtonById(driver, "searchBtn");
-	 employeeListPage.sleepInSecond(5);
+	 verifyTrue(employeeListPage.isJQueryAjaxLoadedSuccess(driver));
 	 
 	 log.info("Add_New_01 - Step 15: Verify Employee Information displayed at 'Result Table'");
-	 verifyEquals(employeeListPage.getValueInTableIDAtRowNumberAndColumnNumber(driver, "resultTable","Id","1"), employeeID);
-	 verifyEquals(employeeListPage.getValueInTableIDAtRowNumberAndColumnNumber(driver, "resultTable","First (& Middle) Name","1"), "automation02");
-	 verifyEquals(employeeListPage.getValueInTableIDAtRowNumberAndColumnNumber(driver, "resultTable","Last Name","1"), "FC");
-  }
+	 verifyEquals(employeeListPage.getValueInTableIDAtColumnNameAndRowIndex(driver, "resultTable", "Last Name", "1"), lastName);
+	 
+}
  
  
   @Test
