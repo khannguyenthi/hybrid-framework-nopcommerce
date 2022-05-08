@@ -114,7 +114,9 @@ public class Level_19_Live_Coding extends BaseTest{
 	 verifyTrue(employeeListPage.isJQueryAjaxLoadedSuccess(driver));
 	 
 	 log.info("Add_New_01 - Step 15: Verify Employee Information displayed at 'Result Table'");
+	 verifyEquals(employeeListPage.getValueInTableIDAtColumnNameAndRowIndex(driver, "resultTable", "Id", "1"), employeeID);
 	 verifyEquals(employeeListPage.getValueInTableIDAtColumnNameAndRowIndex(driver, "resultTable", "Last Name", "1"), lastName);
+	 verifyEquals(employeeListPage.getValueInTableIDAtColumnNameAndRowIndex(driver, "resultTable", "First (& Middle) Name", "1"), "Automation FC");
 	 
 }
  
